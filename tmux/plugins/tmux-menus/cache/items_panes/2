@@ -1,0 +1,1 @@
+ "<P> Zoom pane" z "resize-pane -Z ; run-shell '/Users/bf/.config/tmux/plugins/tmux-menus/items/panes.sh'" "<P> Mark current pane" m "select-pane -m ; run-shell '/Users/bf/.config/tmux/plugins/tmux-menus/items/panes.sh'" "Activate synchronized panes" y "set -w synchronize-panes"
