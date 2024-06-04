@@ -31,7 +31,7 @@ function fish_right_prompt --description "Print the right side prompt"
         if test $s -gt 0
             set -g duration "$m"m "$s"s""
         end
-    else if test "$s" -ge 1
+    else if test "$s" -ge 20
             set -g duration "$s"s""
     else
         set -e duration 

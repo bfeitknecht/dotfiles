@@ -1,3 +1,22 @@
 # do this to have better colors for command ls
 # lsd alias not the vibe 
 set -Ux LSCOLORS gxfxbEaEBxxEhEhBaDaCaD
+
+
+
+
+
+
+
+
+
+
+# delete microsoft auto updater
+# sudo rm -rf /Library/Caches/com.microsoft.autoupdate.fba \
+#                /Library/Caches/com.microsoft.autoupdate.helper \
+#                /Library/LaunchDaemons/com.microsoft.autoupdate.helper.plist \
+#                /Library/Preferences/com.microsoft.autoupdate2.plist \
+#                /Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper
+
+# delete microsoft licensing helper:
+# sudo rm -rf /Library/LaunchDaemons/com.microsoft. ## something licensing something
