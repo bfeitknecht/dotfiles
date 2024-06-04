@@ -1,0 +1,3 @@
+# do this to have better colors for command ls
+# lsd alias not the vibe 
+set -Ux LSCOLORS gxfxbEaEBxxEhEhBaDaCaD
