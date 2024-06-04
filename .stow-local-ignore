@@ -1,0 +1,11 @@
+\.git
+\.gitignore
+\.gitmodules
+\.gitattributes
+
+^/README.*
+^/LICENSE.*
+^/COPYING
+
+# pesky apple files
+\.DS_Store
