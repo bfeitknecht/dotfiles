@@ -11,7 +11,7 @@ function rmsnapshots
         echo "No snapshots."
         return 1
     end
-
+    
     for snapshot in $snapshots
         echo "'$snapshot'"
     end
