@@ -9,9 +9,6 @@ alias totp="security find-generic-password -s TOTP_CLI_DB -w | totp-cli generate
 alias vpn="/Users/bf/HOME/CODE/services/vpn/toggle_ethz_vpn.sh"
 
 
-
-
-
 # make alias for onefetch (git info)
 alias gitinfo="onefetch"
 
@@ -26,13 +23,9 @@ alias chad="NVIM_APPNAME=nvchad nvim"
 alias gitinfo="onefetch"
 
 
-alias lazyvim="NVIM_APPNAME=lazyvim nvim"
-alias kickstart="NVIM_APPNAME=kickstart nvim"
-alias tiny="NVIM_APPNAME=tiny nvim"
-alias nv="NVIM_APPNAME=envy nvim"
-alias chad="NVIM_APPNAME=nvchad nvim"
 
 
+alias nv="NVIM_APPNAME=nv nvim"
 
 
 # alias rmds="/Users/bf/HOME/CODE/services/util/rmds.sh"
