@@ -1,7 +1,9 @@
 # misc
 abbr :q exit
 abbr :e micro
-abbr brcl brew cleanup --prune all
+abbr brcl 'brew cleanup --prune all'
+abbr brdp 'brew deps --tree (brew leaves)'
+
 
 # git related
 abbr gco git checkout

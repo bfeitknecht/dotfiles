@@ -83,4 +83,3 @@ end
 # 
 #     echo -n -s (prompt_login)' ' (set_color $color_cwd) (prompt_pwd) $normal (fish_git_prompt) $normal " "$prompt_status $suffix " "
 # end
-
