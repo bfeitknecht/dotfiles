@@ -1,16 +1,20 @@
 function fish_user_key_bindings --description "Define default user key bindings"
 
-    bind \r trans-execute
-    bind \e- cdup
+    bind \r execute-transient
     bind \ek clear-screen
-    # bind \el clear-ls
-    # bind \el 'commandline -f clear-screen; __fish_list_current_token'
-    bind \el '__fish_list_current_token'
+    bind \el __fish_list_current_token
     bind \cE end-of-line
+    bind \e- cdup-ls
 
+    
+    fzf_configure_bindings --directory=\cf --git_log=\cl --git_status=\cs --history=\cr --processes=\cp --variables=\cv
 end
 
-function trans-execute
+function reset-transient --on-event fish_postexec
+    set -g TRANSIENT 0
+end
+
+function execute-transient
     if commandline --is-valid
     # or test (count $argv) -eq 0
         set -g TRANSIENT 1
@@ -21,16 +25,7 @@ function trans-execute
     commandline -f execute
 end
 
-function clear-ls
-    # echo
-    # commandline -f clear-screen
-    # ls
-    # echo
-    
-    clear
-    ls
-    echo
-    commandline -f repaint
-    # commandline -f cancel
-    # commandline -f execute
+function cdup-ls
+    cdup
+    __fish_list_current_token
 end

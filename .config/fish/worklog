@@ -20,3 +20,21 @@ set -Ux LSCOLORS gxfxbEaEBxxEhEhBaDaCaD
 
 # delete microsoft licensing helper:
 # sudo rm -rf /Library/LaunchDaemons/com.microsoft. ## something licensing something
+#
+
+set the FISH_FZF options and variables
+
+
+fzf supports global default options via the FZF_DEFAULT_OPTS and FZF_DEFAULT_OPTS_FILE environment variables.
+If neither are set, fzf.fish sets its own default opts whenever it executes fzf.
+
+Change fzf options for a specific command
+Each command's fzf options can be configured via a variable:
+
+Command	Variable
+Search Directory	fzf_directory_opts
+Search Git Log		fzf_git_log_opts
+Search Git Status	fzf_git_status_opts
+Search History		fzf_history_opts
+Search Processes	fzf_processes_opts
+Search Variables	fzf_variables_opts
