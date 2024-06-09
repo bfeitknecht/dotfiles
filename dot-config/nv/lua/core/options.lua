@@ -19,6 +19,7 @@ g.loaded_ruby_provider = 0
 ----------------------------------------- o ---------------------------------------------
 
 o.cmdheight = 0
+-- opt.cmdheight = 0
 
 o.laststatus = 2
 -- o.showmode = false
@@ -98,32 +99,85 @@ vim.env.PATH = vim.fn.stdpath "data" .. "/mason/bin:" .. vim.env.PATH
 
 ------------------------------------ statusline -----------------------------------------
 
+function get_mode_name()
+  local current_mode = vim.fn.mode()
+  local mode_map = {
+    ['n'] = 'NORMAL',
+    ['no'] = 'N-PENDING',
+    ['v'] = 'VISUAL',
+    ['V'] = 'V-LINE',
+    ['^V'] = 'V-BLOCK', -- CTRL-V
+    [''] = 'V-BLOCK', -- CTRL-V
+    ['s'] = 'SELECT',
+    ['S'] = 'S-LINE',
+    ['^S'] = 'S-BLOCK', -- CTRL-S
+    ['i'] = 'INSERT',
+    ['ic'] = 'INSERT-COMPLETION',
+    ['ix'] = 'INSERT-COMPLETION',
+    ['R'] = 'REPLACE',
+    ['Rv'] = 'V-REPLACE',
+    ['c'] = 'COMMAND',
+    ['cv'] = 'EX',
+    ['ce'] = 'NORMAL-EX',
+    ['r'] = 'HIT-ENTER',
+    ['rm'] = 'MORE',
+    ['r?'] = 'CONFIRM',
+    ['!'] = 'SHELL',
+    ['t'] = 'TERMINAL'
+  }
+  -- return mode_map[current_mode] or current_mode
+  return current_mode
+end
 
+local function status_line()
+  local mode = "%-2{%v:lua.string.upper(v:lua.vim.fn.mode())%}"
+  local file_name = "%-.16t"
+  local buf_nr = "[%n]"
+  local modified = " %-m"
+  local file_type = " %y"
+  local right_align = "%="
+  local line_nr = "%10([%l/%L%)]"
+  local buf_percent = "%5p%%"
+
+  return string.format(
+    "%s%s%s%s%s%s%s%s",
+    mode,
+    file_name,
+    buf_nr,
+    modified,
+    file_type,
+    right_align,
+    line_nr,
+    buf_percent
+  )
+end
+vim.opt.statusline = status_line()
+
+
+
+
+-------------- don't work ...
+
+-- 
 -- local function status_line()
---   local mode = "%-5{%v:lua.string.upper(v:lua.vim.fn.mode())%}"
+--   local mode = get_mode_name()
 --   local file_name = "%-.16t"
 --   local buf_nr = "[%n]"
 --   local modified = " %-m"
 --   local file_type = " %y"
 --   local right_align = "%="
---   local line_no = "%10([%l/%L%)]"
---   local pct_thru_file = "%5p%%"
+--   local line_nr = "%10([%l/%L%)]"
+--   local buf_percent = "%5p%%"
 -- 
---   return string.format(
---     "%s%s%s%s%s%s%s%s",
+--   return table.concat({
 --     mode,
 --     file_name,
 --     buf_nr,
 --     modified,
 --     file_type,
 --     right_align,
---     line_no,
---     pct_thru_file
---   )
+--     line_nr,
+--     buf_percent
+--   })
 -- end
--- 
 -- vim.opt.statusline = status_line()
-
-
-
-
