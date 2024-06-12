@@ -12,6 +12,7 @@ abbr gca git commit --amend
 abbr ga git add .
 abbr gs git status -sb
 abbr gp git push --verbose
+abbr gsl git lg -5
 
 # extra functions
 abbr ev echo-variable

@@ -19,7 +19,6 @@ g.loaded_ruby_provider = 0
 ----------------------------------------- o ---------------------------------------------
 
 o.cmdheight = 0
--- opt.cmdheight = 0
 
 o.laststatus = 2
 -- o.showmode = false

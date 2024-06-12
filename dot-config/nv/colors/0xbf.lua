@@ -26,7 +26,7 @@ local hi = function(name, val)
 end
 
 -- General
-hi('Normal', {})
+hi('Normal', { bg = 'none' })
 
 hi('Conceal',      { fg = 'LightGrey', bg = 'DarkGrey', ctermfg = 'LightGrey', ctermbg = 'DarkGrey' })
 hi('Cursor',       {})
