@@ -1,0 +1,60 @@
+[user]
+	name = Basil Feitknecht
+	email = bfeitknecht@student.ethz.ch
+	
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	
+[init]
+	defaultbranch = master
+	
+[credential]
+	helper = store
+	
+
+[core]
+	editor = nvim
+	pager = delta
+	# untrackedcache = true
+	# fsmonitor = true
+
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+
+[delta]
+    features = decorations
+
+[delta "interactive"]
+    keep-plus-minus-markers = false
+
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    commit-style = raw
+    file-style = omit
+    hunk-header-decoration-style = blue box
+    hunk-header-file-style = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style = file line-number syntax
+    
+[pager]
+	# log = bat
+	
+[submodule]
+	recurse = true
+	
+[feature]
+	manyFiles = true
+	
+[http]
+	postBuffer = 524288000
+
+[pull]
+	rebase = true
+
+
+[alias]
+
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
