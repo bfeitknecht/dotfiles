@@ -102,8 +102,12 @@ function fish_right_prompt --description "Print the right side prompt"
     ###############################################################################################################
     ###############################################################################################################
     # set SHLVL
+    # TODO: fix this so it shows correct shell level in tmux
     if test (math $SHLVL - 1) -gt 0
         set -g shlvl "≡$(math $SHLVL - 1)"
+        if set -q TMUX
+          set shlvl "≡$(math $SHLVL - 1)"
+        end
     end
 
     

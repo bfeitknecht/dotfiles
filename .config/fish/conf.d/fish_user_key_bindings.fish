@@ -3,11 +3,27 @@ function fish_user_key_bindings --description "Define default user key bindings"
     bind \r execute-transient
     bind \ek clear-screen
     bind \el __fish_list_current_token
-    bind \cE end-of-line
     bind \e- cdup-ls
+    bind \cE end-of-line
 
+    fzf_configure_bindings \
+        --directory=\cf \
+        --git_log=\cl \
+        --git_status=\cs \
+        --history=\cr \
+        --processes=\cp \
+        --variables=\cv
     
-    fzf_configure_bindings --directory=\cf --git_log=\cl --git_status=\cs --history=\cr --processes=\cp --variables=\cv
+end
+
+
+
+
+#########################################################################################################
+
+function cdup-ls
+    cdup
+    __fish_list_current_token
 end
 
 function reset-transient --on-event fish_postexec
@@ -25,7 +41,3 @@ function execute-transient
     commandline -f execute
 end
 
-function cdup-ls
-    cdup
-    __fish_list_current_token
-end
