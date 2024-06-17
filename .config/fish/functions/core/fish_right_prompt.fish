@@ -1,64 +1,86 @@
-function fish_right_prompt --description "Print the right side prompt"
-    set -l last_pipestatus $pipestatus  # first to actually capture the status before changing it
+function fish_right_prompt --description "Print the right prompt"
+    set -f right_prompt (cmd_status)
+    set -a right_prompt (cmd_duration)
+    set -a right_prompt (git_status)
+    set -a right_prompt (shlvl_bg)
+
+    # same line as left prompt
+    tput sc
+    tput cuu1
+    tput cuf 2
+
+    echo -n "$right_prompt"
+    
+    tput rc # return the cursor
+end
+
+
+###############################################################################################################
+###############################################################################################################
+
+
+# command statii, if at least one not zero
+function cmd_status
+    set -l last_pipestatus $pipestatus  # need to do first, actually capture status before change
     set -lx __fish_last_status $status  # Export for __fish_print_pipestatus
+    
     set -q fish_color_status
     or set -g fish_color_status red
     
-    if not set -q TRANSIENT
-        set -g TRANSIENT 1
-    end
-    set -l transient $TRANSIENT
-    
-    tput sc; tput cuu1; tput cuf 2 # make the prompt print on the same line as path
-
-    ###############################################################################################################
-    ###############################################################################################################
-    # set the pipestatus
     set -l status_color (set_color $fish_color_status)
     set -l statusb_color (set_color $fish_color_status)
-    set -l prompt_status (__fish_print_pipestatus "[" "]" "|" "$status_color" "$statusb_color" $last_pipestatus)
-
     
-    ###############################################################################################################
-    ###############################################################################################################
-    # set the last command's duration
-    set -l t $CMD_DURATION
-    set -l s (math --floor $t / 1000 % 60)
-    set -l m (math --floor $t / 1000 / 60 % 60)
-    set -l h (math --floor $t / 1000 / 60 / 60 % 60)
-    if test "$m" -gt 0
-        set -g duration "$m"m""
-        if test $s -gt 0
-            set -g duration "$m"m "$s"s""
-        end
-    else if test "$s" -ge 20
-            set -g duration "$s"s""
-    else
-        set -e duration 
+    set -l cmd_status (__fish_print_pipestatus "[" "]" "|" "$status_color" "$statusb_color" $last_pipestatus)
+
+    if set -q cmd_status
+        echo $cmd_status
     end
     
-#     set -l t $CMD_DURATION
-#     set -l s (math --floor $t / 1000)
-#     set -l m (math --floor $s / 60)
-#     set -l h (math --floor $m / 60)
-#     set -l d (math --floor $h / 24)
-# 
-#     set -g delta ""
-#     test $d -gt 0; and set delta "$d"d; or
-#     test $h -gt 0; 
+    # set -f cmd_status $pipestatus
+    # string replace -a -r "\s" "|" $cmd_status
+    # set cmd_status "[$cmd_status]"
+    # if set -q cmd_status
+    #     echo $cmd_status
+    # end
+end
 
-# duration +=
-#   (d>0) ? d :
-#   (h>0) ? h :   
-#   (m>0) ? m :
-#   (s>0) ? s : ""
-# 
-# 
-#   false; or true
-#   and echo y
-#   or echo n
-#   ... repaet the block here
 
+# command duration if greater than X
+function cmd_duration
+    set -f t $CMD_DURATION
+    
+    set -f s (math $t / 1000 % 60)
+    set -f m (math --floor $t / 1000 / 60 % 60)
+    set -f h (math --floor $t / 1000 / 60 / 60 % 60)
+    
+    if test "$m" -gt 0
+        set -f duration "$m"m""
+        if test $s -gt 0
+            set -f duration "$m"m "$s"s""
+        end
+    else if test "$s" -ge 20
+            set -f duration "$s"s""
+    end
+
+    if set -q duration
+        echo $duration
+    end
+    # test "$t" -gt 0
+    # and set -l s (math $t % 60)
+    # test "$s" -gt '59'
+    # and set -l m (math --floor $t / 60 % 60)
+    # test "$m" -gt 59
+    # and set -l h (math --floor $t / 360 % 60)
+    # test "$h" -gt 23
+    # and set -l d (math --floor $t / 360 / 24)
+    # 
+    #     
+    # duration +=
+    #   (d>0) ? d :
+    #   (h>0) ? h :   
+    #   (m>0) ? m :
+    #   (s>0) ? s : ""
+    # 
     #
     #   5s
     #   59s
@@ -71,66 +93,69 @@ function fish_right_prompt --description "Print the right side prompt"
     #   
     #   1d
     #   6d 23h
-    #   
-    
-    ###############################################################################################################
-    ###############################################################################################################
-    # set git status if in repository
+    #  
+end
+
+
+# git status if in repository
+function git_status
     set -g __fish_git_prompt_show_informative_status true
     set -g __fish_git_prompt_showcolorhints false
     set -g __fish_git_prompt_showupstream informative
     set -g __fish_git_prompt_showdirtystate true
     set -g __fish_git_prompt_showuntrackedfiles true
     set -g __fish_git_prompt_showstashstate true
-    
-    set -g __fish_git_prompt_char_cleanstate '-'
-    set -g __fish_git_prompt_char_conflictedstate '~'
+    set -g __fish_git_prompt_char_untrackedfiles '%'
     set -g __fish_git_prompt_char_dirtystate '*'
-    set -g __fish_git_prompt_char_invalidstate '#'
     set -g __fish_git_prompt_char_stagedstate '+'
+    set -g __fish_git_prompt_char_conflictedstate '~'
+    set -g __fish_git_prompt_char_cleanstate '-'
+    set -g __fish_git_prompt_char_invalidstate '#'
     set -g __fish_git_prompt_char_stashstate '..'
     set -g __fish_git_prompt_char_stateseparator ':'
-    
-    set -g __fish_git_prompt_char_untrackedfiles '%'
     set -g __fish_git_prompt_char_upstream_ahead '↑'
     set -g __fish_git_prompt_char_upstream_behind '↓'
-    # set -g __fish_git_prompt_char_upstream_diverged '!'   # disabled in showupstream=informative
-    # set -g __fish_git_prompt_char_upstream_equal ''
-    set -l git_prompt (fish_git_prompt)
 
+    if __fish_is_git_repository
+        echo (fish_git_prompt)
+    end
     
-    ###############################################################################################################
-    ###############################################################################################################
-    # set SHLVL
-    # TODO: fix this so it shows correct shell level in tmux
-    if test (math $SHLVL - 1) -gt 0
-        set -g shlvl "≡$(math $SHLVL - 1)"
-        if set -q TMUX
-          set shlvl "≡$(math $SHLVL - 1)"
+    set -e __fish_git_prompt_show_informative_status
+    set -e __fish_git_prompt_showcolorhints
+    set -e __fish_git_prompt_showupstream
+    set -e __fish_git_prompt_showdirtystate
+    set -e __fish_git_prompt_showuntrackedfiles
+    set -e __fish_git_prompt_showstashstate
+    set -e __fish_git_prompt_char_untrackedfiles
+    set -e __fish_git_prompt_char_dirtystate
+    set -e __fish_git_prompt_char_stagedstate
+    set -e __fish_git_prompt_char_conflictedstate
+    set -e __fish_git_prompt_char_cleanstate
+    set -e __fish_git_prompt_char_invalidstate
+    set -e __fish_git_prompt_char_stashstate
+    set -e __fish_git_prompt_char_stateseparator
+    set -e __fish_git_prompt_char_upstream_ahead
+    set -e __fish_git_prompt_char_upstream_behind
+end
+
+
+# shell level and background jobs
+function shlvl_bg
+    if set -q TMUX
+        if test (math $SHLVL - 2) -gt 0
+            set -f shlvl_bg "≡$(math $SHLVL - 2)"
+        end
+    else
+        if test (math $SHLVL - 1) -gt 0
+            set -f shlvl_bg "≡$(math $SHLVL - 1)"
         end
     end
 
-    
-    ###############################################################################################################
-    ###############################################################################################################
-    # display all of it
-    
-    if test -n "$prompt_status"
-        set -p duration ""
+    if jobs -q
+        set -a shlvl_bg "[&]"
     end
-    
-    if test -n "$prompt_status" -o -n "duration"
-        set -p shlvl ""
-    end
-    
-    echo -n "$prompt_status"
-    echo -n "$duration"
-    echo -n "$git_prompt"
-    echo -n "$shlvl"
-    
-    set -e duration
-    set -e shlvl
-    
-    tput rc # return the cursor
-end
 
+    if set -q shlvl_bg
+        echo $shlvl_bg
+    end
+end
