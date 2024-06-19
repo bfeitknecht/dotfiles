@@ -5,6 +5,8 @@ alias vpn="/Users/bf/HOME/CODE/services/vpn/toggle_ethz_vpn.sh"
 
 alias gitinfo="onefetch"
 
+alias cat="bat --style=plain,numbers,changes,rule,snip"
+
 # alias nv="NVIM_APPNAME=nv nvim"
 
 # alias rmds="/Users/bf/HOME/CODE/services/util/rmds.sh"
