@@ -6,6 +6,7 @@ set fish_complete_path (path resolve $__fish_config_dir/completions/*/) $fish_co
 
 set -gx EDITOR micro
 set -gx VISUAL micro
+set -gx PAGER "less -# -R .1 -M -J --status-line --incsearch +Gg"
 
 # i'm not stupid
 set -gx HOMEBREW_NO_ENV_HINTS true
