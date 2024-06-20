@@ -1,0 +1,55 @@
+# FORMULAE
+bat
+bottom
+docker
+dust
+fd
+fish
+git
+git-delta
+lazygit
+lazydocker
+less
+lsd
+lua
+luajit
+micro
+neovim
+ollama
+openjdk@17
+ripgrep
+tmux
+totp-cli
+trash
+
+
+# extra
+bash
+zsh
+stow
+spim
+
+
+
+# check if different possible
+fzf
+zoxide
+
+
+
+
+# casks
+arc
+docker
+eclipse-java
+iterm2
+obsidian
+rectangle
+spotify
+utm
+visual-studio-code
+whatsapp
+
+
+# consider
+discord
