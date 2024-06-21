@@ -10,4 +10,8 @@
 # pesky apple files
 \.DS_Store
 
+# WIP for setup script
 setup
+
+# WIP for ssh config
+.ssh/keys/*

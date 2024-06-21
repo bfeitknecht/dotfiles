@@ -28,3 +28,8 @@ function fish_prompt --description "Print out the prompt"
         echo
     end
 end
+
+# cut optional trailing slash
+# string replace -r '/$' '' $HOME
+
+# try to do it in one go
