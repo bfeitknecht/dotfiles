@@ -14,7 +14,7 @@ function fish_prompt --description "Print out the prompt"
     end
 
     set -l host (hostname -s | string replace -r '^student-net-' '')
-    set -l cwd (string replace -r "^$HOME" '~' $PWD)
+    set -l cwd (string replace -r "^.*$USER" '~' $PWD)
 
     if test $transient -eq 1
         printf \e\[0J               # clear the line, idk why
