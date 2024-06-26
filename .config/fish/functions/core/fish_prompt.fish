@@ -14,7 +14,7 @@ function fish_prompt --description "Print out the prompt"
     end
 
     set -l host (hostname -s | string replace -r '^student-net-' '')
-    set -l cwd (string replace -r "^.*$USER\/?" '~' $PWD)  # '$1' is captured group
+    set -l cwd (string replace -r "^.*$USER(/\$)?" '~' $PWD)
 
     if test $transient -eq 1
         printf \e\[0J               # clear the line, idk why
@@ -28,8 +28,3 @@ function fish_prompt --description "Print out the prompt"
         echo
     end
 end
-
-# cut optional trailing slash
-# string replace -r '/$' '' $HOME
-
-# try to do it in one go
