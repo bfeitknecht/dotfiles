@@ -1,5 +1,5 @@
 function fish_right_prompt --description "Print the right prompt"
-    set -f right_prompt (cmd_status)
+    set -f right_prompt (cmd_status) # i think this causes the problem of the elusive whitespace
     set -a right_prompt (cmd_duration)
     set -a right_prompt (git_status)
     set -a right_prompt (shlvl_bg)
@@ -33,7 +33,7 @@ function cmd_status
     set -l cmd_status (__fish_print_pipestatus "[" "]" "|" "$status_color" "$statusb_color" $last_pipestatus)
 
     if set -q cmd_status
-        echo $cmd_status
+        style $cmd_status
     end
     
     # set -f cmd_status $pipestatus
@@ -62,9 +62,10 @@ function cmd_duration
             set -f duration "$s"s""
     end
 
-    if set -q duration
-        echo $duration
+    if set -q duration  # duration > t ?
+        style $duration
     end
+
     # test "$t" -gt 0
     # and set -l s (math $t % 60)
     # test "$s" -gt '59'
@@ -117,7 +118,7 @@ function git_status
     set -g __fish_git_prompt_char_upstream_behind '↓'
 
     if __fish_is_git_repository
-        echo (fish_git_prompt)
+        style (fish_git_prompt)
     end
     
     set -e __fish_git_prompt_show_informative_status
@@ -141,6 +142,10 @@ end
 
 # shell level and background jobs
 function shlvl_bg
+    # hm, something fishy is going on here, have a useless space
+    #
+    #
+    
     if set -q TMUX
         if test (math $SHLVL - 2) -gt 0
             set -f shlvl_bg "≡$(math $SHLVL - 2)"
@@ -156,6 +161,6 @@ function shlvl_bg
     end
 
     if set -q shlvl_bg
-        echo $shlvl_bg
+        style $shlvl_bg
     end
 end
