@@ -1,6 +1,16 @@
 # misc
 abbr :q exit
 abbr :e micro
+
+##################
+# maybe add this as alias?
+# abbr brug abbr brug 'brew upgrade --greedy --dry-run;
+#   read -P "Upgrade all? [Y/n]: " choice;
+#   test -z "$choice";
+#   or test "$choice" = "y" -o "$choice" = "Y";
+#   and brew upgrade --greedy'
+
+abbr brug 'brew upgrade --greedy'
 abbr brcl 'brew cleanup --prune all'
 abbr brdp 'brew deps --tree (brew leaves)'
 abbr nv 'nvim'
