@@ -1,2 +1,4 @@
 **/.DS_Store
 .ssh/keys/*
+.config/zsh/.zsh_history
+
