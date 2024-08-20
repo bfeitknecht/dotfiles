@@ -1,0 +1,320 @@
+brew
+ls
+cd ..
+ls
+cd ..
+ls
+cd bin
+ls
+cd
+ls
+cd ..
+ld
+ls
+cd ..
+ls
+cd usr
+ls
+cd local
+ls
+cd
+cd bin
+cd ..
+ls
+cd ..
+l
+cd bin
+ls
+cd bash
+ls
+cds
+cd
+ls
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/bf/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+brew
+brew install fish
+fish
+fish
+clear
+exit
+eza -@
+fish
+exit
+fish
+echo hello
+ [ -z $WARP_BOOTSTRAPPED ] && echo $0 | command -p grep -q zsh && unsetopt ZLE && eval 'setopt hist_ignore_space; unsetopt ZLE; WARP_IS_SUBSHELL=1; WARP_SESSION_ID="$(command -p date +%s)$RANDOM"; _hostname=$(command -pv hostname >/dev/null 2>&1 && command -p hostname 2>/dev/null || command -p uname -n); _user=$(command -pv whoami >/dev/null 2>&1 && command -p whoami 2>/dev/null || echo $USER); _msg=$(printf "{\"hook\": \"InitShell\", \"value\": {\"session_id\": $WARP_SESSION_ID, \"shell\": \"zsh\", \"user\": \"$_user\", \"hostname\": \"$_hostname\", \"is_subshell\": true}}" | command -p od -An -v -tx1 | command -p tr -d " \n"); printf '"'"'\x1b\x50\x24\x64%s\x9c'"'"' "$_msg"; unset _hostname _user _msg;' || [ -z $WARP_BOOTSTRAPPED ] && echo $0 | command -p grep -q bash && eval 'command -p stty raw;unset PROMPT_COMMAND;HISTCONTROL=ignorespace;HISTIGNORE=" *";WARP_IS_SUBSHELL=1;WARP_SESSION_ID="$(command -p date +%s)$RANDOM";_hostname=$(command -pv hostname >/dev/null 2>&1 && command -p hostname 2>/dev/null || command -p uname -n);_user=$(command -pv whoami >/dev/null 2>&1 && command -p whoami 2>/dev/null || echo $USER);_msg=$(printf "{\"hook\": \"InitShell\", \"value\": {\"session_id\": $WARP_SESSION_ID, \"shell\": \"bash\", \"user\": \"$_user\", \"hostname\": \"$_hostname\", \"is_subshell\": true}}" | command -p od -An -v -tx1 | command -p tr -d " \n");printf '"'"'\x1b\x50\x24\x64%s\x9c'"'"' $_msg;unset _hostname _user _msg;' || [ -z $WARP_BOOTSTRAPPED ] && [ $FISH_VERSION ] && eval 'set -g WARP_SESSION_ID (random);set _hostname $(command -v hostname >/dev/null 2>&1 && command hostname 2>/dev/null || uname -n);set _user $(command -v whoami >/dev/null 2>&1 && command whoami 2>/dev/null || echo $USER);set _msg $(echo -n "{\"hook\": \"InitShell\", \"value\": {\"session_id\": $WARP_SESSION_ID, \"user\": \"$_user\", \"hostname\": \"$_hostname\", \"shell\": \"fish\", \"is_subshell\": true}}" | od -An -v -tx1 | command tr -d " \n");echo -n \u1b\u50\u24"d$_msg"\u9c;set -e _hostname _user _msg;'
+sh
+bash
+exit
+zsh
+	 [ -z $WARP_BOOTSTRAPPED ] && echo $0 | command -p grep -q zsh && unsetopt ZLE && eval 'setopt hist_ignore_space; unsetopt ZLE; WARP_IS_SUBSHELL=1; WARP_SESSION_ID="$(command -p date +%s)$RANDOM"; _hostname=$(command -pv hostname >/dev/null 2>&1 && command -p hostname 2>/dev/null || command -p uname -n); _user=$(command -pv whoami >/dev/null 2>&1 && command -p whoami 2>/dev/null || echo $USER); _msg=$(printf "{\"hook\": \"InitShell\", \"value\": {\"session_id\": $WARP_SESSION_ID, \"shell\": \"zsh\", \"user\": \"$_user\", \"hostname\": \"$_hostname\", \"is_subshell\": true}}" | command -p od -An -v -tx1 | command -p tr -d " \n"); printf '"'"'\x1b\x50\x24\x64%s\x9c'"'"' "$_msg"; unset _hostname _user _msg;' || [ -z $WARP_BOOTSTRAPPED ] && echo $0 | command -p grep -q bash && eval 'command -p stty raw;unset PROMPT_COMMAND;HISTCONTROL=ignorespace;HISTIGNORE=" *";WARP_IS_SUBSHELL=1;WARP_SESSION_ID="$(command -p date +%s)$RANDOM";_hostname=$(command -pv hostname >/dev/null 2>&1 && command -p hostname 2>/dev/null || command -p uname -n);_user=$(command -pv whoami >/dev/null 2>&1 && command -p whoami 2>/dev/null || echo $USER);_msg=$(printf "{\"hook\": \"InitShell\", \"value\": {\"session_id\": $WARP_SESSION_ID, \"shell\": \"bash\", \"user\": \"$_user\", \"hostname\": \"$_hostname\", \"is_subshell\": true}}" | command -p od -An -v -tx1 | command -p tr -d " \n");printf '"'"'\x1b\x50\x24\x64%s\x9c'"'"' $_msg;unset _hostname _user _msg;' || [ -z $WARP_BOOTSTRAPPED ] && [ $FISH_VERSION ] && eval 'set -g WARP_SESSION_ID (random);set _hostname $(command -v hostname >/dev/null 2>&1 && command hostname 2>/dev/null || uname -n);set _user $(command -v whoami >/dev/null 2>&1 && command whoami 2>/dev/null || echo $USER);set _msg $(echo -n "{\"hook\": \"InitShell\", \"value\": {\"session_id\": $WARP_SESSION_ID, \"user\": \"$_user\", \"hostname\": \"$_hostname\", \"shell\": \"fish\", \"is_subshell\": true}}" | od -An -v -tx1 | command tr -d " \n");echo -n \u1b\u50\u24"d$_msg"\u9c;set -e _hostname _user _msg;'
+clear
+exit
+bash
+exit
+brew list
+brew uninstall alacritty
+fish
+macchina
+fish
+fish
+csh
+csh
+exec starship
+fish
+fish
+fish
+/Applications/Utilities/Terminal.app
+fish
+fish
+echo $SHELL
+exit
+ls -a
+fuckds
+fish
+fish
+fish
+exit
+exit
+exit
+exit
+bash
+exit
+exit
+exit
+ while ! [[ $(ps aux | grep vivado_container | wc -l | tr -d "\n\t ") == "1" ]]; do /Users/bf/HOME/CODE/playground/vivado/vivado-on-silicon-mac/xvcd/bin/xvcd; sleep 1; done; exit
+xvcd
+ while ! [[ $(ps aux | grep vivado_container | wc -l | tr -d "\n\t ") == "1" ]]; do /Users/bf/HOME/CODE/playground/vivado/vivado-on-silicon-mac/xvcd/bin/xvcd; sleep 1; done; exit
+ while ! [[ $(ps aux | grep vivado_container | wc -l | tr -d "\n\t ") == "1" ]]; do /Users/bf/HOME/CODE/playground/vivado/vivado-on-silicon-mac/xvcd/bin/xvcd; sleep 1; done; exit
+exit
+ while ! [[ $(ps aux | grep vivado_container | wc -l | tr -d "\n\t ") == "1" ]]; do /Users/bf/HOME/CODE/playground/vivado/vivado-on-silicon-mac/xvcd/bin/xvcd; sleep 1; done; exit
+ while ! [[ $(ps aux | grep vivado_container | wc -l | tr -d "\n\t ") == "1" ]]; do /Users/bf/HOME/CODE/playground/vivado/vivado-on-silicon-mac/xvcd/bin/xvcd; sleep 1; done; exit
+/Users/bf/IDE\&VM/zyx/docker/vivado/bin/loader ; exit;
+test "$?BASH_VERSION" = "0" || eval 'setenv() { export "$1=$2"; }';                setenv PATH "/Applications/Wine Stable.app/Contents/Resources/start/bin:/Applications/Wine Stable.app/Contents/Resources/wine/bin:$PATH"; winehelp --clear
+wine Downloads/IWBTB/I\ Wanna\ Be\ The\ Boshy.exe
+wine Downloads/IWBTB/I\ Wanna\ Be\ The\ Boshy.exe
+wine Downloads/IWBTB/I Wanna Be The Boshy.exe
+wine Downloads/IWBTB/I Wanna Be The Boshy.exe
+~/IWBTB/IWBTB.exe
+wine ~/IWBTB/IWBTB.exe
+wine ~/IWBTB/IWBTB.exe && exit
+wine ~/IWBTB/IWBTB.exe && exit
+wine ~/IWBTB/IWBTB.exe && exit
+wine ~/IWBTB/IWBTB.exe && exit
+wine ~/IWBTB/IWBTB.exe && osascript -e "tell application \\\"Terminal\\\" to quit"
+wine ~/IWBTB/IWBTB.exe && osascript -e "tell application "Terminal" to quit"
+wine ~/IWBTB/IWBTB.exe && osascript -e "tell application "Terminal" to quit"
+wine ~/IWBTB/IWBTB.exe && osascript -e "tell application "Terminal" to quit"
+wine ~/IWBTB/IWBTB.exe && osascript -e "tell application "Terminal" to quit"
+wine ~/IWBTB/IWBTB.exe && exit
+wine ~/IWBTB/IWBTB.exe && exit
+wine ~/IWBTB/IWBTB.exe && exit
+wine ~/IWBTB/IWBTB.exe && osascript -e "tell application \\Terminal\\ to quit"
+osascript -e 'tell application "Terminal" to quit'
+exit
+exit
+!
+man !
+man %
+exit
+echo $HOST
+exit
+man
+exit
+tmux
+exit
+/Users/bf/Downloads/chatgpt-free-api ; exit;
+/Users/bf/Downloads/chatgpt-free-api ; exit;
+/Users/bf/Downloads/chatgpt-free-api ; exit;
+/Users/bf/Downloads/chatgpt-free-api ; exit;
+/Users/bf/Downloads/chatgpt-free-api ; exit;
+finder .
+exit
+btm
+ls -a
+cd .config/zsh
+ls
+edit .zshrc
+micro .zshrc
+brew ls
+ls
+ls -a
+touch .zshrc
+touch .zshenv
+touch .zprofile
+rm *
+ls
+ls -a
+rm .*
+ls
+ls -a
+exec zsh
+brew ls
+btm
+eval "$(/opt/homebrew/bin/brew shellenv)"
+btm
+brew ls
+exec zsh
+btm
+exit
+echo $ZDOTDIR
+exit
+font
+who
+which $SHELL
+echo $ZDOTDIR
+ls -a
+z zsh
+exec zsh
+z zsh
+zoxide zsh
+zoxide
+cd .config
+cd zsh
+ls
+ls -a
+touch .zprofile .zlogin .zlogout
+ls -a
+cat *
+cat ./*
+cat .*
+cat *~.zsh_history
+cat .*~.zsh_history
+fish
+brew search zsh
+brew info zsh-navigation-tools
+brew info zsh-fast-syntax-highlighting
+exec zsh
+echo $ZDOTDIR
+exec zsh
+edit .zshrc
+exec zsh
+exec zsh
+exec zsh
+exec zsh
+exec zsh
+fast-theme
+fast-theme -h
+fast-theme -l
+fast-theme base16
+fast-theme clean
+fast-theme free
+fast-theme default
+exec zsh
+micro /etc/zshenv
+cd
+brew ls
+cd .config/zsh
+ls
+ls -a
+cat .zshenv
+cat .zshrc
+cat .zprofile
+ls
+ls a
+ls -a
+exec zsh
+micro .zshrc
+ls
+exec zsh
+exec fish
+man -v ?
+exit
+say -v '?' | awk '{print $1}' | while read voice; do printf "using $voice...\n"; say -v $voice "hello, this is me using the $voice voice"; sleep 1; done
+say -v '?' | while read line;\
+    do\
+    voice=$(echo $line | awk '{print $1..\
+    ..\
+    done
+exit
+say -v '?' | grep "en_US" | awk '{print $1}' | while read voice; do printf "using $voice...\n"; say -v $voice "hello, this is me using the $voice voice"; sleep 1; don[Ce\
+
+say -v '?' | grep "en_US" | awk '{print $1}' | while read voice; do printf "using $voice...\n"; say -v $voice "hello, this is me using the $voice voice"; sleep 1; done\
+
+    curl https://cheat.sh/:zsh > ~/.zsh.d/_cht\
+    echo 'fpath=(~/.zsh.d/ $fpath)' >> ~/.zshrc\
+    # Open a new shell to load the plugin
+    curl https://cheat.sh/:zsh > ~/.zsh.d/_cht
+ls -a
+fish
+ls
+brew ls
+z hh
+cd home/code/escapades/hh666
+echo -e $(cat v2-fg-color.txt)
+echo -e $(cat v2-bg-color.txt)
+echo -e $(cat v2-bg-color.txt)
+echo -e $(cat v2-fgbg-color.txt)
+echo -e $(cat v2-fgbg-color.txt)
+echo -e $(cat v2-fgbg-color.txt)
+z v2
+cd home/code/escapades/hh666/v2/output
+echo -e $(cat v2-fgbg-color.txt)
+brew
+ls
+cd .config/fish
+ls
+fish
+micro fish_variables
+nano fish_variables
+exit
+fish
+z zyxx
+cd ~/home/code/escapades/zyxx/docs/assets/idea
+cat output/v2-fgbg-color.txt
+cd home/code/playground/var
+cat color255.
+cat color255.txt
+cd
+echo $-
+echo $'\uf115'
+echo $SHELL
+ls -a
+cd home/eth
+open -a iTerm .
+asc
+asciiquarium
+asciiquarium
+fish
+sleep 5 &
+exit
+caffeinate &
+jobs
+sleep 5
+jobs
+cat /dev/null
+cat -v /dev/null
+cat -e /dev/null
+jobs -p
+jobs -q
+man jobs
+jobs -c
+jobs -g
+jobs -p
+echo [%2]
+echo "[%2]"
+echo "[&2]"
+echo "[2&]"
+echo "[&]"
+sudo -i
+asciiquarium
+pipes.sh
+pipes.sh
+man pipes
+man pipes.sh
+pipes.sh
+ls -a
+rmds
+open -a iTerm && osascript -e 'tell application "iTerm2" to tell the first window to create tab with default profile' -e 'tell application "iTerm2" to tell the first window to tell current session to write text "cd DESIGN"'\
+
+open -a iTerm && osascript -e 'tell application "iTerm2" to tell the first window to create tab with default profile' -e 'tell application "iTerm2" to tell the first window to tell current session to write text "cd DESIGN"'\
+
+cd DESIGN; open -a iTerm
+cd
+man open
+open -t /Users/bf/HOME/eth/vault/.scripts/test
+open -a iTerm /Users/bf/HOME/eth/vault/sem2/DDCA/PV/notes
+open -a iTerm /Users/bf/HOME/eth/vault/sem2/DDCA/PV/notes
