@@ -38,3 +38,38 @@ Search Git Status	fzf_git_status_opts
 Search History		fzf_history_opts
 Search Processes	fzf_processes_opts
 Search Variables	fzf_variables_opts
+
+
+
+#### MY SHIT SLOW AF
+#
+# it's not the initial exec's fault, although that could be better too
+# 
+# when conf.d is rm, no problems with speed
+#
+# problem is in env.fish
+# in custom fisher path expansion
+#
+#
+# this should work??
+#
+# Cache resolved paths
+set cache_file $HOME/.cache/fish/cached_paths.fish
+
+if not test -f $cache_file
+    set resolved_function_path (path resolve $__fish_config_dir/functions/*/)
+    set resolved_complete_path (path resolve $__fish_config_dir/completions/*/)
+
+    echo "set fish_function_path $resolved_function_path \$fish_function_path" > $cache_file
+    echo "set fish_complete_path $resolved_complete_path \$fish_complete_path" >> $cache_file
+end
+
+source $cache_file    
+
+
+$ time source $HOME/.cache/fish/cached_paths.fish
+
+________________________________________________________
+Executed in  401.00 micros    fish           external
+   usr time  325.00 micros  325.00 micros    0.00 micros
+   sys time   63.00 micros   63.00 micros    0.00 micros

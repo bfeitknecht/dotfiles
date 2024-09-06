@@ -1,6 +1,8 @@
+# this is slowing me down
+# but maybe only in git repos...
 # add function subdirs to fish_function_path
-set fish_function_path (path resolve $__fish_config_dir/functions/*/) $fish_function_path
 # add completion subdirs to fish_completion_path
+set fish_function_path (path resolve $__fish_config_dir/functions/*/) $fish_function_path
 set fish_complete_path (path resolve $__fish_config_dir/completions/*/) $fish_complete_path
 
 
@@ -54,10 +56,9 @@ set -gx fzf_preview_file_cmd "bat --paging=never \
 
 
 ### cargo ######################################################################################
-source "$HOME/.cargo/env.fish"
-
-
-
+if type -q cargo
+  source "$HOME/.cargo/env.fish"
+end
 
 
 ### java #######################################################################################

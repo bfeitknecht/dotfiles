@@ -5,6 +5,7 @@ function fish_user_key_bindings --description "Define default user key bindings"
     bind \el __fish_list_current_token
     bind \e- cdup-ls
     bind \cE end-of-line
+    bind \cd detach
 
     fzf_configure_bindings \
         --directory=\cf \
@@ -41,3 +42,10 @@ function execute-transient
     commandline -f execute
 end
 
+function detach
+  if set -q TMUX
+    tmux detach -P
+  else
+    exit
+  end
+end

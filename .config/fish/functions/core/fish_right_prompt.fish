@@ -1,10 +1,10 @@
 function fish_right_prompt --description "Print the right prompt"
-    set -f right_prompt (cmd_status) # i think this causes the problem of the elusive whitespace
+    set -f right_prompt (cmd_status)
     set -a right_prompt (cmd_duration)
     set -a right_prompt (git_status)
     set -a right_prompt (shlvl_bg)
 
-    # same line as left prompt
+    # put at same line as left prompt
     tput sc
     tput cuu1
     tput cuf 2
@@ -28,14 +28,14 @@ function cmd_status
     or set -g fish_color_status red
     
     set -l status_color (set_color $fish_color_status)
-    set -l statusb_color (set_color $fish_color_status)
-    
-    set -l cmd_status (__fish_print_pipestatus "[" "]" "|" "$status_color" "$statusb_color" $last_pipestatus)
 
-    if set -q cmd_status
+    set -l cmd_status (__fish_print_pipestatus "[" "]" "|" "$status_color" "$status_color" $last_pipestatus)
+
+    # output the status if it's not empty
+    if test -n "$cmd_status"
         style $cmd_status
     end
-    
+
     # set -f cmd_status $pipestatus
     # string replace -a -r "\s" "|" $cmd_status
     # set cmd_status "[$cmd_status]"
@@ -43,6 +43,8 @@ function cmd_status
     #     echo $cmd_status
     # end
 end
+
+
 
 
 # command duration if greater than X
