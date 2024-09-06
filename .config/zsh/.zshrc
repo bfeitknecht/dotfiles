@@ -130,3 +130,22 @@ unset key
 
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+
+# save a lot of history
+HISTSIZE=1000000
+SAVEHIST=1000000
+
+# all instances share the same history
+setopt SHARE_HISTORY
+
+# history expansion goes into the editor buffer first
+setopt HIST_VERIFY
+
+# don't show dupes in history search
+setopt HIST_FIND_NO_DUPS
+
+# don't history commands beginning in space (consistent with bash)
+setopt HIST_IGNORE_SPACE
+
+# allow comments in the shell
+setopt INTERACTIVE_COMMENTS

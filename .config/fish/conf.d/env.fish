@@ -55,3 +55,10 @@ set -gx fzf_preview_file_cmd "bat --paging=never \
 
 ### cargo ######################################################################################
 source "$HOME/.cargo/env.fish"
+
+
+
+
+
+### java #######################################################################################
+set -gx CPPFLAGS "-I/opt/homebrew/opt/openjdk@17/include"
