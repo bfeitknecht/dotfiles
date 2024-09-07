@@ -14,6 +14,7 @@ function fish_right_prompt --description "Print the right prompt"
     tput rc # return the cursor
 end
 
+#set async_prompt_functions git_status
 
 ###############################################################################################################
 ###############################################################################################################
@@ -165,4 +166,10 @@ function shlvl_bg
     if set -q shlvl_bg
         style $shlvl_bg
     end
+end
+
+
+function fish_right_prompt_loading_indicator -a last_prompt
+    echo -n "$last_prompt" | sed -r 's/\x1B\[[0-9;]*[JKmsu]//g' | read -zl uncolored_last_prompt
+    echo -n (set_color brblack)"$uncolored_last_prompt"(set_color normal)
 end

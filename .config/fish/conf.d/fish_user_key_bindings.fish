@@ -1,7 +1,7 @@
 function fish_user_key_bindings --description "Define default user key bindings"
 
     bind \r execute-transient
-    bind \ek clear-screen
+    bind \ek clear-everything
     bind \el __fish_list_current_token
     bind \e- cdup-ls
     bind \cE end-of-line
@@ -24,7 +24,8 @@ end
 
 function cdup-ls
     cdup
-    __fish_list_current_token
+    #__fish_list_current_token
+    commandline -f repaint
 end
 
 function reset-transient --on-event fish_postexec
@@ -48,4 +49,15 @@ function detach
   else
     exit
   end
+end
+
+function clear-everything
+  commandline -f repaint
+  commandline -f clear-screen
+  
+end
+
+
+function copy-commandline
+  commandline | fish_clipboard_copy
 end
