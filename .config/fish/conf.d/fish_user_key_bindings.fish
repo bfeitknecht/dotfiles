@@ -4,6 +4,9 @@ function fish_user_key_bindings --description "Define default user key bindings"
     bind \ek clear-everything
     bind \el __fish_list_current_token
     bind \e- cdup-ls
+    # make this update the prompt, redraw the prompt
+    bind \e, nextd && commandline -f repaint
+    bind \e. prevd && commandline -f repaint
     bind \cE end-of-line
     bind \cd detach
 

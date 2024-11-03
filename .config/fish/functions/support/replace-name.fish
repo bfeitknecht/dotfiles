@@ -1,6 +1,6 @@
 function replace-name --description "replace-name <find> <replace> [PATH] [OPTIONS]"
   
-  echo $argv | read -l find replace
+  echo $argv[1..2] | read -l find replace
   
   argparse \
     'f/force' \
@@ -11,7 +11,7 @@ function replace-name --description "replace-name <find> <replace> [PATH] [OPTIO
   # at this point find and replace are still in $argv
   #echo $argv
   
-  echo $argv | read -l path
+  echo $argv[-1] | read -l path
   if test -n "$path"
     cd -- $path     # if path given go there
   end
@@ -23,7 +23,7 @@ function replace-name --description "replace-name <find> <replace> [PATH] [OPTIO
   set files (fd)
 
   for f in $files
-    set -l new (string replace $find $replace $f)
+    set -l new (string replace --all "$find" "$replace" "$f")
     mv $f $new
   end
 

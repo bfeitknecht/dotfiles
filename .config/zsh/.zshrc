@@ -149,3 +149,7 @@ setopt HIST_IGNORE_SPACE
 
 # allow comments in the shell
 setopt INTERACTIVE_COMMENTS
+
+# no titles
+DISABLE_AUTO_TITLE="true"
+
