@@ -6,7 +6,7 @@ function fish_prompt --description "Print out the prompt"
 
     set -l symbol '$'
     set -l user (whoami)
-    
+
     # different suffix and user color for root
     if functions -q fish_is_root_user; and fish_is_root_user
         set -f u "red"
@@ -15,8 +15,10 @@ function fish_prompt --description "Print out the prompt"
 
     set -l host (hostname -s | string replace -r '^student-net-' '')
     set -l cwd (string replace -r "^(/Users|/home)/$USER(/\$)?" '~' $PWD)
-
-    if test $transient -eq 1
+    
+    # transient prompt inserts newline before command output in tmux
+    # FIXME
+    if false && test $transient -eq 1
         printf \e\[0J               # clear the line, idk why
         style -n "$symbol "
         echo
@@ -24,7 +26,7 @@ function fish_prompt --description "Print out the prompt"
         style -n -o "$user@$host:"
         style -n "$cwd"
         echo
-        style -n "$symbol " 
+        style -n "$symbol "
         echo
     end
-end
+   end

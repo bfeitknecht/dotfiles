@@ -6,8 +6,8 @@ set fish_function_path (path resolve $__fish_config_dir/functions/*/) $fish_func
 set fish_complete_path (path resolve $__fish_config_dir/completions/*/) $fish_complete_path
 
 
-set -gx EDITOR micro
-set -gx VISUAL micro
+set -gx EDITOR nvim
+set -gx VISUAL zed
 set -gx PAGER "less -# -R .1 -M -J --status-line --incsearch +Gg"
 
 # i'm not stupid

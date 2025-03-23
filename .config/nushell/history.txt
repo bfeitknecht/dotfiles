@@ -1,0 +1,1173 @@
+cd
+config nu
+exit
+cd
+exxit
+cd
+exi
+$nu.env-path
+config env
+ls
+$env.config
+ls
+$nu.default-config-dir
+$nu.vendor-autoload-dirs
+" abc<\n>abc<\n><\n><\n><\n>abc"
+"<\n><\n><\n><\n><\n><\n><\n><\n><\n><\n><\n><\n><\n><\n>"
+$env.config | table -e | bat -p
+abc  |<\n>echo $in
+"abc"  |<\n>echo $in
+"abc"  |<\n>prinit
+"abc"  |<\n>print
+brew
+$env.config
+config nu
+config env
+config nu
+nu
+config nu
+cd
+ls
+config nu
+ls
+z nushell
+zoxide
+man zoxide
+$nu.config-path
+$nu.default-config-dir
+nu
+config nu
+env nu
+config env
+config nu
+z
+z nushell
+z config
+z -
+brew info fzf
+brew install fzf
+fzf
+brew info skim
+brew info sk
+cd ..
+use util *
+nvim util/mod.nu
+use util *
+util
+ls
+1..
+1.. 4
+1..3
+1.. | ignore
+config nu
+exit
+gstat
+z vault
+gstat
+gstat --help
+nu plugins
+plugins
+plugin list
+plugin
+plugin add nu_plugin_gstat
+z nushell
+ls -a
+zi
+cd -
+ls
+cd util
+ls
+cd mod.nu
+cat mod.nu
+nv mod.nu
+nvim mod.nu
+$env.config.edit_mode = 'vi'
+ls
+ls -a | where size < 1gb
+def hi [] { "hi" }
+hi
+alias ciao = hi
+ciao
+hide hi
+ciao
+cd ..
+ls
+nvim zoxide.nu
+nivm zoxide.nu
+nvim zoxide.nu
+nu
+nvim zoxide.nu
+ls
+nv config.nu
+nvim config.nu
+config env
+config nu
+m
+nvim
+<\n>
+:
+::
+true
+ignore
+ls
+ls && ls
+ls and ls
+which and
+and
+or
+help and
+z vaul
+cd
+z nushell
+nu config
+ls
+(<\n><\n><\n>ls)
+config nu
+ansi green
+hi
+ansi red "e"
+"ge"
+$"(ansi red)hi"
+clear
+ls
+$"(ansi red)char dollar"
+$"(ansi red)(char dollar)"
+char --help
+char --list
+clear
+^clear 
+open .Trash/
+open --help
+clear
+ls
+^ls
+^lsd
+êza
+^eza
+fish
+$'(ansi rb)Hello(ansi reset) (ansi gd)Nu(ansi reset) (ansi pi)World(ansi reset)'
+$"(ansi --escape '3;93;41m')Hello(ansi reset)"  # italic bright yellow on red background
+let bold_blue_on_red = {  # `fg`, `bg`, `attr` are the acceptable keys, all other keys are considered invalid and will throw errors.<\n>        fg: '#0000ff'<\n>        bg: '#ff0000'<\n>        attr: b<\n>    }<\n>    $"(ansi --escape $bold_blue_on_red)Hello, Nu World!(ansi reset)"
+cat /etc/shellsa
+keybindings list 
+keybindings listen 
+fd
+fd | fzf 
+keybindings list 
+keybindings list | explore
+clear
+3days / 2s
+3d / 2s
+3d / 1h
+ls
+(ls).1
+(ls).[..3]
+(ls).[:3]
+(ls).[1..3]
+(ls).[.3]
+(ls) | where size > 1gb
+(ls) | where size > 200b
+http get http://google.com | less
+ls | to csv
+ls | to json
+ls | to toml
+ls | to json
+z haskell
+clear
+sudo -i
+clear
+ghci
+ghci-9.12 
+z haskell
+z nushell
+echo $TMUX
+echo $env.TMUX
+scope variables
+$env.TMUX in (scope variables)
+$env.TMUX? | is-not-empty
+if true { "a" }
+nvim config.nu
+cd ..
+nvim config.nu
+$env.TMUX 
+$env.TMUX?
+$env.TMUX ?
+ear
+clear
+$env.TMUX | is-empty
+$env.TMUX | is-not-empty
+ls
+ls -
+for
+for 
+while (<\n>true)
+while (true)
+while (true<\n>) ;
+while (true<\n>) ignore
+while (true<\n>) 
+nu
+ls
+clear
+ls (<\n><\n><\n><\n><\n><\n><\n><\n><\n>pwd<\n><\n><\n>)
+ls (<\n><\n><\n><\n><\n><\n><\n><\n><\n><\n>pwd<\n>)
+ls (<\n><\n><\n>pwd<\n>)
+ls (<\n><\n>pwd<\n>)
+ls (<\n>pwd<\n>)
+ls (<\n><\n>pwd<\n>)
+whoami
+$env.USER
+$env.HOSTNAME
+$env.HOST
+sys host
+$env.HOME
+$env.PWD | str-replace $env.HOME "~"
+$env.PWD | str replace $env.HOME "~"
+tmux
+sys host
+(sys host).hostname
+(sys host).hostname | type
+(sys host).hostname | info
+(sys host).hostname | describe
+tmux
+use themes.nu
+$env.config.color_config
+$env.config.color_config | sort
+"$(ansi bold) abc"
+$"(ansi bold) abc"
+$"(ansi -e bold) abc"
+$"(ansi -e bold) abc (ansi reset)"
+$"(ansi -e bold) abc (ansi -e reset)"
+(ansi bold) "abc"
+((ansi bold) "abc")
+$"(ansi -e bold) abc (ansi -e reset)"
+{|x| 'bold'}
+{|"abc"| 'bold'}
+closure_350
+print $"(ansi -e bold) abc (ansi -e reset)\n"
+clear
+use std/config colors
+use std/config light_theme
+use std/config light-theme
+$env.config.color_config = (light-theme)
+ls
+$env.config.color_config = (dark-theme)
+use std/config dark-theme
+$env.config.color_config = (dark-theme)
+ls
+clear
+$env.config.color_config = (dark-theme)
+config nu
+$env.config.color_config = (dark-theme)
+config nu
+clear
+$env.config.color_config = (dark-theme)
+$env.config.color_config = (light-theme)
+dark-the,e
+dark-theme
+config nu
+dark-theme
+light-theme
+config nu
+date
+date now
+date humanize
+(date now | format date '%m/%d/%Y %I:%M:%S%.3f')
+$env.render_right_prompt_on_last_line
+$env.render_right_prompt_on_last_line = true
+$env.render_right_prompt_on_last_line = false
+clear
+y
+z play
+pwd
+$env.PWD
+$env.HOME
+$env.PWD | str replace $env.HOME "~"
+($pwd)
+pwd
+z play
+cd ..
+ls
+cd ..
+pwd
+cd
+cd ..
+pwd
+clear
+brew upgrade
+{cwd}
+"{cwd"
+"{cwd}"
+$"{cwd}"
+n = 1
+$n=1
+let n = 4
+n | each {"../"}
+$n | each {"../"}
+n
+$n
+"../" | math repeat $n | str join ""
+use std/math
+use std/math *
+"../" | math repeat $n | str join ""
+seq $n | each { "../" } | str join ""
+let n = 3<\n>seq $n | each { "../" } | str join ""
+let n = 3<\n>(0..<$n | each { "../" } | str join "")
+let n = 3<\n>(seq $n | each { "../" } | str join "")
+let n = 3<\n>(1..$n | each { "../" } | str join "")
+"../../../" | path normalize
+"../../../" | path
+"../../../" | path $in
+cdup
+pwd
+cdup 2
+pwd
+cdup 
+pwd
+ls
+cd HOME/
+cd eth
+cdup
+ls
+pwd
+cdup 1
+pwd
+"../../../" | path expand
+pwd
+cdup
+pwd
+cdup 1
+pwd
+cdup 3
+pwd
+cdup
+pwd
+cdup 2
+pwd
+cdup
+cd ..
+ls
+cd
+(do { pwd })
+cd ..
+ls
+cd ..
+$env.PROMPT_COMMAND = left-prompt 
+cd ..
+left-prompt 
+cd ..
+left-prompt 
+cd ..
+left-prompt 
+nvim util/mod.nu
+config nu
+cd ..
+cd
+clear
+keybindings listen
+keybindings list
+keybindings listen
+config nu
+...
+..
+cd -
+ls
+~
+..
+nvim util/mod.nu
+keybindings listen
+..
+cd
+~
+keybindings default
+z eth
+z vault
+hostname
+^hostname
+hostname -s
+hostname -d
+nvim config.nu
+let m = 3
+let op = { |x| $x * $m }
+$op 3
+op 3
+$op 3
+$m
+let m = 2
+let mm = { |x| $x * $m }
+mm 3
+$mm 3
+let mm = { |x| $x * $env.m }
+$mm 3
+1..2 | each $mm
+let mm = { |x| $x * $m }
+1..2 | each $mm
+1 | $mm
+do $mm 2
+ghci-9.12 
+(ls).2
+(ls).1
+(ls | transpose ).1
+(ls | transpose ).2
+(ls | transpose ).4
+(ls | transpose ).3
+ls | transpose
+(ls | transpose ).0
+ls
+(ls).name
+((ls).name | tranpose).0
+((ls).name | transpose).0
+((ls).name | transpose)
+help list
+list help
+((ls).name | transpose)
+((ls).name | transpose).0
+((ls).name | tranpose)
+((ls).name | transpose)
+ls((ls).name | transpose)
+((ls).name | transpose)
+(ls).name
+(ls).name | each { |x| echo $x }
+(ls).name | each { |x| item: $x }
+(ls).name | str join " "
+(ls).name | str join ","
+(ls).name | | reverse | str join ","
+(ls).name
+(ls).name | reverse
+(ls).name | reverse | str join ", "
+(ls).name | wrap
+(ls).name | wrap "Dir"
+((ls).name | wrap "Dir").Dir
+(ls).name | wrap "Dir" | transpose
+z eth
+pwd
+z eth
+pwd
+alias
+alias ciao = hi
+cia
+ciao
+def hi [] { "hi" }
+ciao
+hi
+alias ciao = hi
+ciao
+http get https://blog.rust-lang.org/feed.xml
+ls /
+ls
+ls --dir
+ls --help
+ls | where type == dir
+ls
+nvim util/mod.nu
+config nu
+cargo install --locked nu_plugin_gstat
+rustup update
+cargo install --locked nu_plugin_gstat
+plugin add nu_plugin_gstat
+plugin add .cargo/bin/nu_plugin_gstat
+gstat
+gstat --help
+gstat .
+z eth
+z vault
+gstat
+gstat .
+gstat . -t
+man gstat
+which gstat
+ls
+ls -a
+cat .luarc.json
+rm .luarc.json
+rm .sqlite_history
+fish -c "rmds"
+ls -a
+.dotfiles/
+ls -a
+rm .luarc.json
+$env.TRANSIENT_PROMPT_COMMAND = "a"
+$env.TRANSIENT_PROMPT_COMMAND = ""
+$env.PROMPT_COMMAND = ""
+$env.PROMPT_COMMAND = "abc"
+fzf
+brew upgrade --greedy
+sleep 5
+sleep 5sec
+let a = { ls }
+do $a
+ls
+"" | describe
+nvim new-module.nu
+nvim
+nvim a.nu
+nvim
+nvim new-module.nu
+let a = null
+a | null
+a | describe
+$a | is-null
+$a | { == null }
+$a == null
+if true { "" }
+if true { "a" }
+cd cn
+ls
+"abc" and "a"
+echo abc
+echo abc and echo a
+echo abc; and echo a
+echo abc; echo a
+ls; and ls
+let module = "abc"
+$module
+cat VRL/CN-v-w02.md
+seq 14
+seq 14 | each { echo $in }
+eq 1..14
+1..14
+seq 1..14
+help seq
+seq 1 14
+seq 1 14 | each {|n| printf "%02d" $n }
+seq 1 14 | each {|n| $"($n | fmt "{:02}")" }
+http get google.com
+http get https://ethz.ch
+use std/input
+input 
+input $a
+let a = ull
+let a = null
+a = "abc"
+$a = "abc"
+let a = "abc"
+input "Please enter the module name"
+input "Please enter the module name:\n"
+let input = (input "Enter name:\n")
+let input = (input "Enter name: ")
+let a = null
+$a | is-empty
+let a = ""
+$a | is-empty
+if (true) { let abc = "abc" }
+$abc
+abc = null
+let abc = "a"
+if (true) { let abc = "abc" }
+$abc
+if (true) { $abc = "abc" }
+let abc
+mut abc
+let a = "a"
+mut abc = $a
+abc
+$abc
+if (true) { $abc = "abc" }
+abc
+$abc
+touch $"($abc).md"
+ls
+rm abc.md
+nvim
+brew upgrade --greedy
+brew rm zig
+brew cleanup --prune=all
+brew upgrade --greedy
+abbreviations
+helpabbreviations
+help abbreviations
+z nushell
+config nu
+source $env.config
+source $env.config-path
+let a = (<\n><\n><\n><\n>)
+a
+a$a
+$a
+()
+(((((((()))))))<\n>)
+clear
+ghci-9.12 
+brug
+brew upgrade --greedy 
+config nu
+^rmds
+fish -c "rmds"
+fish -c "rmtm"
+fisher list
+1.. | filter { < 10 }
+1.. | filter { |n| n < 10 }
+help filter
+1..10 | filter { $in < 5 }
+1..10 | filter { $in > 5 }
+$env.config.use-colors = false
+$env.config.use_ansi_coloring = false
+ls -a
+config use-colors
+ansi .l
+ansi -l
+ansi green
+ssh atm
+brug
+brew upgrade --greedy 
+brew cleanup --prune=all 
+fish -c vpn
+sys host
+hostname
+fish -c vpn
+help save
+1..15 | save abc
+seq 1 10 | save abc
+cat abc
+read abc
+open abc
+open abc | each { echo $in }
+brcl
+brug
+brew upgrade --greedy 
+clear
+^clear 
+ls
+^clear 
+z nushell
+nvim config.nu
+alias rmds = "fish -c rmds"
+alias rmds = fish -c rmds
+rmds
+alias rmtm = fish -c rmtm
+rmtm
+rmds
+nvim config.nu
+nu --version
+ssh atm
+functions --show vpn
+config nu
+rmds
+rmtm
+hostname
+time { left-prompt }
+left-prompt 
+time left-prompt 
+time do { left-prompt }
+z nushell 
+nvim util/mod.nu
+z vault
+git pull
+a = "a"
+"a" | describe
+import util/qr-code.nu
+bat .gitconfig
+cat .gitconfig
+cat .gitconfig | less
+help table
+cat .gitconfig | table
+save --help
+let a = (input "test: ")
+$a
+let module = "abc"
+seq 1 14 | each {|n| printf $"$module-v-w%02d" $n }
+"a" | touch $in
+lw
+ls
+rm a
+printf "a" | touch $in
+ls
+rm 
+rm a
+ls
+let m = "abc"
+help save
+echo a | save f
+cat f
+let content = "<\n><\n>abc"
+content
+echo content
+echo $content
+let content = "<\n>abc"
+echo $content
+let content = $"<\n>$a$a$a"
+echo $content
+let content = $"<\n>$a$a"
+echo $content
+let content = $"(ls)"
+echo content
+let  g = $"hi ($a)"
+let a = "a"
+let  g = $"hi ($a)"
+echo g
+echo $g
+let msg = $"\<\n>"
+let msg = $"\<\n>---<\n>($a)<\n>"
+let msg = $"<\n>---<\n>($a)<\n>"
+echo $msg
+let a = "\<\n>abc<\n>"
+let a = "\\<\n>abc<\n>"
+echo $a
+let a = "\\n\<\n>abc"
+let a = "\<\n>abc"
+mut_str --help
+let msg = "\<\n>abc"
+cat << EOF
+r#'$a'#
+let a = "a"
+r$#'$a'#
+r#'$a'#
+str --help
+"<\n>abc" | str trim
+"<\n>abc<\n>a<\n>b<\n>c" | str trim
+let a = "<\n>abc" | str trim
+$a
+let a = "<\n>abc<\n><\n><\n>a<\n><\n><\n>b<\n><\n>" | str trim
+$a
+"<\n>\tabc<\n>abc" | str trim
+let i = 1
+let a = if (i == 1) {""}
+let a = if ($i == 1) {""}
+let a = if ($i != 1) {""}
+$a
+let a = if ($i != 1) {"a"}
+$a
+$a | describe
+let a = if ($i != 1) {"a"} else {""}
+$a | describe
+let a = if ($i != 1) {"a"}
+$"($a)"
+$"(abc$a)"
+$"abc($a)"
+let a = if ($i != 1) {"a"} else {"x"}
+$"abc($a)"
+let i = 1
+$"a($i | printf "%02d" $in)"
+format --help
+format number --help
+def f [--n: int] {i}
+f --i 1
+f --n 1
+def f [--n: int] {n}
+f --n 1
+def f [--n: int] {$n}
+f --n 1
+f --n=1
+def f [n: int] {$n}
+f 1
+def f [n: int, m: int] {$n + $m}
+f 1 12
+1..14
+seq 1 14
+1..14 | each {$in}
+1..14 | each {echo $in}
+seq 1 14 | each {echo $in}
+(seq 1 14) == (1..14)
+seq 1
+seq 2
+seq 14
+1..14 | each {|i| touch $"f-$i"}
+1..14 | do {|i| touch $"f-$i"}
+ls
+rm f*
+ls
+ls -a
+rm .bash_history
+rm .bun_repl_history
+seq 1 14 | each {|i| touch $"f-($i)"}
+ls
+rm f*
+ls
+1..14 | each {|i| touch $"f-($i)"}
+ls
+rm f*
+hostname
+:
+true
+ignore
+false
+ignore
+$"(ansi red)(char dollar)"
+char --list
+char us
+$"(ansi red)(char esep)"
+help char
+let $ = 1
+$$
+$
+let a = 0
+a
+$a
+$
+let $ = "$"
+$
+let $ = '$'
+$
+$"(ansi green)$"
+$"(ansi green)$:"
+$"(ansi bold)$"
+help ansi
+ansi -l
+$"(ansi white_bold)$"
+$"(ansi wb)$"
+$"(ansi wbi)$"
+$"(ansi bo)$"
+$"(ansi bl)$"
+ansi -l
+char space
+show
+let a = "$"
+a
+$a
+[' '].repeat(4)
+$"([' '].repeat(4))"
+$"(' ' * 4)"
+str --help
+[' ', ..]
+[' ' 3]
+[1..4]
+[1...4]
+1..4
+' '..' '
+1..1
+$"('value' * 4)"
+['value'] | repeat 4
+generate 4 { echo "value" }
+'a' | repeat 4
+'a' | fill
+'a' | fill 4
+help fill
+fill --character (char space) --width 4
+"" | fill --character (char space) --width 4
+"" | fill --character (char tilde) --width 4
+"" | fill --character (char tilde) -w4
+"" | fill --character (char tilde) -w 4
+"" | fill -c (char tilde) -w 4
+repeat
+(char space) | repeat 5
+(char tilde) | repeat 5
+exec u
+(<\n><\n>ls)
+(<\n>ls<\n>(<\n>pwd)<\n>)
+z nu
+nvim util/mod.nu
+config nu
+z nus
+mut a = 1
+a ++= 2
+$a ++= 2
+mut a = [1]
+$a ++= 2
+$a ++= [1]
+$a
+[] | describe
+[1..] | describe
+seq char a
+seq char --help
+psql
+ps
+ls
+brug
+brew upgrade --greedy 
+brew rm microsoft-word
+brug
+brew upgrade --greedy 
+brew rm microsoft-word
+brew rm microsoft-word --force
+brew cleanup --prune=all 
+brew upgrade --greedy 
+brew rm microsoft-word --force
+brew list
+brew list | grep microsoft
+brew rm microsoft-auto-update --force
+brew cleanup --prune=all 
+brew list
+brew abv 
+nu --help
+config nu
+brew alias
+alias
+brew command
+clear
+cat /etc/shells 
+echo $env.SHELL
+echo (which nu) | save --append /etc/shells
+which nu
+(which nu).path
+cal
+btm
+$env
+$env | grep path
+config env
+config nu
+config env
+$nu.default-config-dir
+$nu.vendor-autoload-dirs
+1..4 | each { "x" }
+1..4 | each { |in| $"x($in)" }
+char colon
+char -l
+cat /etc/environment
+cd /etc
+ls
+$nu.vendor-autoload-dirs
+z nushell
+"a" | replicate 5
+l
+lsd
+ls
+eza
+ls
+alias l = fish -c l
+l
+rm plugin.msgpackz
+cat prompt-shenanigans 
+rm prompt-shenanigans
+l
+touch login.nu
+ls
+l
+alias l = fish -c l
+l
+$nu.vendor-autoload-dirs
+$nu.default-config-dir
+env
+$nu.default-config-dir = null
+let nu.default-config-dir = null
+$nu
+$nu.user-autoload-dirs
+$nu.config-path
+let nu.default-config-dir = /Users/bf/.config/nushell
+$nu.default-config-dir
+ls
+mkdir autoload
+mv zoxide.nu autoload/
+__zoxide_z 
+zi
+mv autoload/zoxide.nu .
+mv zoxide.nu autoload/
+$nu.user-autoload-dirs
+config env
+z Applications/
+__zoxide_z 
+help config login
+env
+env | rg nu
+env | rg NU
+$nu.config-path
+ls
+cd autoload/
+ls
+nvim alias.nu
+rmds
+nvim abbr.nu
+nvim alias.nu 
+nvim keybindings.nu
+nvim completions.nu
+$nu.user-autoload-dirs
+autoload/
+pwd
+let nu.user-autoload-dirs = /Users/bf/.dotfiles/.config/nushell/autoload
+config env
+$nu.default-config-dir
+$nu.config-path
+$nu.user-autoload-dirs
+$nu
+plugin add .cargo/bin/nu_plugin_gstat
+cargo install --locked nu_plugin_gstat
+plugin add .cargo/bin/nu_plugin_gstat
+ls
+which nu_plugin_gstat 
+plugin add ~/.cargo/bin/nu_plugin_gstat
+ls
+ga
+git add -a
+git add.
+git add .
+cd autoload/
+ls
+nvim zoxide.nu 
+nvim env.nu 
+z 
+config nu
+nvim autoload/alias.nu 
+z
+__zoxide_z 
+nvim autoload/alias.nu 
+__zoxide_z nushell
+nvim autoload/alias.nu 
+nvim autoload/zoxide.nu 
+nvim env.nu 
+nvim autoload/zoxide.nu 
+nvim env.nu 
+nvim alias.nu 
+nvim autoload/alias.nu 
+zoxide init nushell
+source (zoxide init nushell)
+const c = (zoxide init nushell)
+let c = (zoxide init nushell)
+source $c
+nvim env.nu 
+date
+date now
+nvim autoload/zoxide.nu 
+help alias
+help aliases
+scope aliases
+nvim autoload/completions.nu 
+z liases
+help aliases
+nvim autoload/zoxide.nu 
+nvim autoload/alias.nu 
+help aliases
+l
+fish -c l
+z nushell
+nvim autoload/zoxide.nu 
+scope aliases
+z vault
+fd .nu
+fd -I .nu
+nvim config.nu 
+pwd
+fish
+z nus
+ls
+cd util/
+ls
+nvim config.nu 
+'a' | describe
+ls (<\n><\n>pwd<\n>)
+nvim autoload/prompt.nu
+ghci-9.12 
+replicate "2" 4
+ghci-9.12 
+nvim util/mod.nu
+nvim autoload/prompt.nu
+nvim util/mod.nu
+nvim revision.txt
+eza
+alias l = fish -c l
+l
+fish -c "functions --show l"
+fish -c "functions l"
+eza --tree
+clear
+z nushell
+nvim autoload/prompt.nu
+nvim util/mod.nu
+z nushell
+$env.PWD
+time $env.PWD
+time (pwd)
+^time
+^time { echo $env.PWD }
+^time { $env.PWD }
+^time do { $env.PWD }
+^time $env.PWD
+fish
+time $env.PWD
+time {<\n>$env.PWD<\n>}
+ls -ld /Users/bf/.dotfiles/.config/nushell
+echo $env.PWD
+time  
+time echo $env.PWD
+^time echo $env.PWD
+^time echo (pwd)
+nvim autoload/prompt.nu
+nvim util/mod.nu
+alias '!!' = $history | last | get command
+nvim autoload/keybindings.nu 
+nvim autoload/abbr.nu 
+mv autoload/ autoload.bak
+ls
+ls 
+mv autoload.bak/ autoload
+overlay use zeri
+overlay use zero
+overlay list
+z nushell
+ls
+nvim config.nu 
+nvim autoload/abbr.nu 
+nvim login.nu 
+nvim config.nu 
+nvim util/mod.nu 
+nvim autoload/alias.nu 
+nvim autoload/completions.nu 
+brug
+z nushell
+ssh root@local
+ssh root@localhost
+ssh bf@localhost
+nvim autoload/keybindings.nu 
+nvim autoload/abbr.nu 
+ssh atm
+z nushell
+nvim autoload/prompt.nu 
+hostname
+ping echo.local
+ping ech.local
+nvim autoload/prompt.nu 
+dig echo.local
+dig localhost
+ipconfig getifaddr en0
+nvim config.nu 
+networksetup -listallhardwareports
+z BA
+ping echo.local
+nmap local
+arp -a
+brew install gleam
+brcl
+brew cleanup --prune=all 
+nvim 
+nvim revision.txt 
+exit
+sys
+sys | get host
+sys.host
+sys host
+duration
+help duration
+help date
+now
+(date now) + 1d
+(date now) + 1day | describe
+"" | describe
+run-external osascript -e $"display notification '\($message)' with title '\($title)' sound name 'Ping'"
+run-external osascript $"display notification '\($message)' with title '\($title)' sound name 'Ping'"
+let $message = ""
+let $title = "Reminder"
+run-external osascript $"display notification '\($message)' with title '\($title)' sound name 'Ping'"
+osascript -e "display notification"
+run-external osascript -e "display notification"
+run-external 'osascript -e "display notification"'
+osascript -e "display notification with title 'Title'"
+osascript -e "display notification '' with title 'Title'"
+osascript -e "display notification 'message' with title 'Title'"
+osascript -e 'display notification "forget your luggage!!!" with title "Zürich HB"'
+osascript -e 'display notification "forget your luggage!!!" with title $title'
+osascript -e $"display notification "forget your luggage!!!" with title ($title)"
+osascript -e $"display notification ($title) with title ($title)"
+osascript -e $"display notification '($title)' with title ($title)"
+osascript -e $"display notification '' with title ($title)"
+osascript -e $"display notification \"a\" with title ($title)"
+osascript -e $"display notification \"a\" with title \"($title)\""
+osascript -e $"display notification \"($title)\" with title \"($title)\""
+osascript -e $"display notification \"\" with title \"($title)\""
+osascript -e $"display notification \"\" with title \"\""
+osascript -e $"display notification \"A\" with title \"\""
+osascript -e $"display notification \"\" with title \"A\""
+osascript -e $"display notification \"A\" with title \"\""
+osascript -e $"display notification \"A\" with title \"A\""
+osascript -e $"display notification \".\" with title \"A\""
+osascript -e $"display notification \"A\" with title \".\""
+osascript -e $"display notification \"A\" with title \"\""
+osascript -e $"display notification \"\" with title \"A\""
+osascript -e $"display notification \"Reminder\" with title \"($message | default "")\""
+osascript -e $"display notification \"Reminder\" with title \"($message | default "insert")\""
+osascript -e $"display notification \"Reminder\" with title \"("insert")\""
+osascript -e $"display notification \"Reminder\" with title \"($message | default "insert")\""
+let message = null
+osascript -e $"display notification \"Reminder\" with title \"($message | default "insert")\""
+reminder --help
+let now = date now
+$now
+let now = date now
+let x = $now + 15min
+$x

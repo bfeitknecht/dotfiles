@@ -1,6 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR __fish_initialized:3400
+SETUVAR --export XDG_CONFIG_HOME:/Users/bf/\x2econfig
+SETUVAR __fish_initialized:3800
 SETUVAR _fisher_acomagu_2F_fish_2D_async_2D_prompt_40_a89bf4216b65170e4c3d403e7cbf24ce34b134e6_files:\x7e/\x2econfig/fish/plugins/conf\x2ed/__async_prompt\x2efish
 SETUVAR _fisher_brewingweasel_2F_fishbang_files:\x7e/\x2econfig/fish/plugins/conf\x2ed/fishbang\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/plugins/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/plugins/completions/fisher\x2efish
@@ -30,7 +31,7 @@ SETUVAR fish_color_option:\x1d
 SETUVAR fish_color_param:00d7d7
 SETUVAR fish_color_quote:e4e4e4
 SETUVAR fish_color_redirection:ff5f00\x1e\x2d\x2dbold
-SETUVAR fish_color_search_match:bryellow\x1e\x2d\x2dbackground\x3dbrblack
+SETUVAR fish_color_search_match:white\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_status:red
 SETUVAR fish_color_user:brgreen
@@ -50,4 +51,4 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dreverse
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/opt/homebrew/opt/openjdk\x4017/bin\x1e/Users/bf/\x2ego/bin\x1e/opt/homebrew/opt/openjdk/bin\x1e/Users/bf/\x2ecargo/bin\x1e/opt/homebrew/bin
+SETUVAR fish_user_paths:/Users/bf/\x2elocal/bin\x1e/opt/homebrew/opt/openjdk\x4021/bin\x1e/Users/bf/\x2eghcup/bin\x1e/opt/homebrew/opt/openjdk\x4017/bin\x1e/Users/bf/\x2ego/bin\x1e/opt/homebrew/opt/openjdk/bin\x1e/Users/bf/\x2ecargo/bin\x1e/opt/homebrew/bin

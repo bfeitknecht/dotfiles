@@ -48,6 +48,7 @@ end
 
 function detach
   if set -q TMUX
+  and not $hostname = "echo.local"
     tmux detach -P
   else
     exit

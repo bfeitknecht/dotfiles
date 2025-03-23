@@ -29,3 +29,5 @@ abbr gpl 'git pull --rebase --verbose'
 
 # extra functions
 abbr ev echo-variable
+
+abbr tks 'tmux kill-session'

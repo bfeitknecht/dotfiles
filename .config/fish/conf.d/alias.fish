@@ -8,3 +8,6 @@ alias totp="security find-generic-password -s TOTP_CLI_DB -w | \
 
 alias vpn="/Users/bf/HOME/CODE/services/vpn/toggle_ethz_vpn.sh"
 
+alias ghci="ghci-9.12.1"
+alias ghc="ghc-9.12.1"
+
