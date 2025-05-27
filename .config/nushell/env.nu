@@ -16,4 +16,18 @@
 #
 # You can remove these comments if you want or leave
 # them for future reference.
+let additionals = [
+  "/opt/homebrew/bin",
+  "/usr/local/bin",
+  "/Users/bf/.local/bin",
+  "/Users/bf/.orbstack/bin",
+  "/Users/bf/.ghcup/bin",
+  "/Users/bf/.go/bin",
+  "/Users/bf/.cargo/bin",
+  "/users/bf/.cl/bin",
+  "/opt/homebrew/opt/openjdk/bin"
+]
+
+$env.PATH = $additionals ++ ($env.PATH | split row (char esep))
+
 

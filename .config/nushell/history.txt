@@ -1171,3 +1171,1304 @@ $now
 let now = date now
 let x = $now + 15min
 $x
+fish -c l
+http get https://ethz.ch
+mut $a = 1
+mut aa = 1
+mut a = 1
+$a
+let $a = 1
+let $a = 2
+$$a
+$aa
+$a
+$nu.default-config-dir
+$nu
+config nu
+config env
+fish -c l
+config help
+help config
+config flatten
+transpose --help
+{ a: "a", b: "2" }
+{ a: "a", b: "2" } | transpose --as-record
+{ a: "a", b: "2" } | pivot
+{ a: "a", b: "2" } | transpose
+{ a: "a", b: "2" } | transpose | transpose
+ls (<\n><\n><\n>)
+z nushell
+nvim autoload/keybindings.nu 
+ls
+"abc" =~ "a"
+"abc" =~ "b"
+"a" == "a"
+ls /Users/bf/
+ls
+z nushell
+nvim autoload/keybindings.nu 
+nvim autoload/abbr.nu 
+brcl
+brew cleanup --prune=all 
+nvim autoload/abbr.nu 
+nvim autoload/keybindings.nu 
+:
+alias : = true
+alias : = ""
+alias : = ("")
+alias : = ls
+:
+orb list
+exit
+z gleam
+git pull
+ls
+git status
+nv
+nvim
+fish
+k
+ifconfig
+ssh root@169.254.42.4
+arp -a
+ssh root@echo.local
+ping 169.254.42.4
+dig 169.254.42.4
+ssh root@169.254.42.4
+arp -a
+ping 169.254.255.255
+ssh root@169.254.255.255
+ls
+docker run --rm -it alpine:latest -v (pwd):/home/root
+docker run --rm -it alpine:latest -v $"(pwd):/home/root"
+z nushell
+m autoload/abbr.nu
+nvim autoload/abbr.nu
+fish -c l
+fish -c "functions --show l"
+fish -c "function --show l"
+fish -c "functions show l"
+lsd
+ls
+fish -c l
+reminder --help
+use util/reminder
+nvim util/mod.nu 
+mkdir broken
+mv autoload/abbr.nu broken
+nvim autoload/completions.nu 
+nvim autoload/keybindings.nu 
+ls | get name
+ls | get name | transpose
+ls | get name | describe
+ls | get name | to text
+to --help
+ls | get name | to nuon
+ls | get name | to md
+nvim autoload/keybindings.nu 
+ls | get name
+[1, 2, 3]
+ls | get name | table -i false
+ls | get name | table -i false | to text
+ls | get name | table -i false | flatten
+ls | get name | table -i false | table flatten
+ls | get name | table -i false | list flatten
+ls | get name | table -i false
+table -l
+for --help
+let themes = table -l
+for t in $themes { table -l | first 5 | table -t $t }
+for t in $themes { print (table -l | first 5 | table -t $t) }
+for t in $themes { print  table -l | first 5 | table -t $t) }
+$t
+$themes
+brew cleanup --prune=all 
+brew upgrade --greedy 
+brew cleanup --prune=all 
+nv
+nvim 
+z ba
+nvim einleitun.txt
+ls
+mkdir T
+cd T
+z t
+ls
+pwd
+ls
+mkdir T
+ls
+mkdir t
+ls
+rm T
+ls
+z T
+use std/dirs
+dirs
+dirs drop
+dirs
+dirs add ~
+dirs
+dirs goto 0
+dirs goto 1
+dirs
+dirs prev
+time nu -c "use std/dirs"
+ssh atm
+clear  --help
+alias clear = clear -k
+clear
+help function
+help command
+help commands
+z vpn
+ls
+git status
+z vpn
+git status
+ls
+sudo -i
+sudo -s
+hostname -f
+hostname -d
+hostname -m
+hostname -s
+z nushell
+nvim autoload/prompt.nu 
+ls
+exit
+tmux
+tmux ls
+nvim einleitung.txt 
+nvim revision.txt 
+nvim einleitung.txt 
+nvim fragen.txt
+nvim einleitung.txt 
+nvim einleintung2.txt
+nvim revision.txt 
+nvim einleintung2.txt
+nvim einleintung.txt
+nvim einleitung.txt 
+ls
+zed
+zed .
+tmux a
+kathara lrestart
+tmux a
+kathara lrestart
+tmux a
+git status
+git add .
+git statius -sb
+git status -sb
+gh --help
+git remote add origin curl https://gitlab.inf.ethz.ch/PRV-PERRIG/networks-course/project-kathara/computer-networks-2025-student-kathara/bfeitknecht-kathara-project.git
+git remote add origin https://gitlab.inf.ethz.ch/PRV-PERRIG/networks-course/project-kathara/computer-networks-2025-student-kathara/bfeitknecht-kathara-project.git
+git remote show origin
+git push
+kathara lrestart
+tmux a
+kathara lrestart
+tmux a
+kathara lrestart
+tmux a
+python
+python3
+z haskell
+ghci-9.12 
+config nu
+config env
+z autoload
+ls
+orb
+ssh orb
+orb
+cat id_ed25519.pub 
+ssh atm
+ls
+nvim config
+rm atm*
+ls
+mv config soseth_config
+nvim config_soseth 
+mv config_soseth config
+ls
+nvim config 
+nvim soseth_config 
+mv config soseth.config
+mv soseth config
+mv soseth_config config
+ls
+nvim config
+nvim soseth.config 
+cd
+commandline
+commandline edit
+commandline edit --help
+commandline edit -r $"(ls)"
+commandline edit -r $"(^ls)"
+z nushell
+nvim autoload/keybindings.nu 
+z chess
+ls
+cd glchss/
+ls
+git push
+zed
+git pusg
+git push
+ping google.com
+git push
+bruc
+brew upgrade --greedy 
+brew cleanup
+brew cleanup --prune all 
+brew rm carpace
+brew rm carapace
+ss
+z glchss
+ls
+cd ..
+mv glchss/ chess-competition
+mv chess-competition/ glchss
+orb
+cd glchss/
+ls
+git branch
+git branch --help
+ssh stm
+ssh atm
+ssh cm-lee.vsos.ethz.ch
+http get https://ethz.ch | table
+source util/vrl.nu
+nvim util/vrl.nu 
+source util/vrl.nu
+nvim util/vrl.nu 
+source util/vrl.nu
+vrl
+source util/vrl.nu
+vrl
+nvim util/vrl.nu 
+use mod *
+use util *
+vrl
+ls util/
+nvim util/mod.nu
+use util/vrl.nu
+vrl
+vrl --name "abc"
+ls
+cd abc
+ls
+cat abc.md
+cd vrl
+ls
+cat abc.md
+cat abc-v-01.md
+cat abc-v-w01.md
+cat abc-v-w02.md
+cd ..
+rm -rf abc/
+nvim autoload/completions.nu
+brew install carapace
+nvim util/mod.nu
+help str
+nu --version
+use std-rfc/"str dedent"
+use std-rfc/str
+str dedent
+str dedent $"\t a"
+str dedent --help
+"\ta" str dedent
+$"\ta" | str dedent
+$"\n\ta" | str dedent
+$"\n\ta\n" | str dedent
+$"\n\ta\t" | str dedent
+a = "<\n>abc<\n>- d<\n>"
+$a | str dedent
+let a = "<\n>abc<\n>- d<\n>"
+$a | str dedent
+nvim util/vrl.nu
+nvim util/vrl.nu 
+use util/vrl.nu
+vrl --name "abc"
+nvim util/vrl.nu 
+use util/vrl.nu
+ignore | describe
+use util/vrl.nu
+nvim util/vrl.nu 
+use util/vrl.nu
+nvim util/vrl.nu 
+use util/vrl.nu
+nvim util/vrl.nu 
+use util/vrl.nu
+nvim util/vrl.nu 
+use util/vrl.nu
+ls
+rm -rf abc/
+vrl --name "abc"
+use util/vrl.nu
+nvim util/vrl.nu 
+use util/vrl.nu
+rm -rf abc/
+vrl --name "abc"
+cd abc/
+ls
+cd ue
+ls
+cd ..
+ls vrl
+cat VRL/abc-v-w02.md 
+cd ..
+rm -rf abc/
+ls
+nvim util/vrl.nu 
+use util/vrl.nu
+vrl --name "abc"
+cd abc
+ls
+cat VRL/abc-v-w03.md 
+cd ..
+ls
+rm -rf abc/
+ls
+z fish
+echo SHLVL
+echo $env.SHLVL
+fish
+orb
+orb --help
+fish
+echo $env.PATH
+nvim config.fish 
+time fish -c exit
+time nu -c exit
+brug
+brew upgrade --greedy 
+brew cleanup --prune all 
+rmds
+rmtm
+z ba
+cat synthese.txt 
+z nushell
+ls
+git clone https://github.com/nushell/nupm.git
+use nupm/nupm
+nupm install nupm --force --path
+$nu.config-path
+$nu.default-config-dir
+nvim config.nu 
+l
+ls
+nvim config.nu 
+cd nupm/
+ls
+cd modules/
+ls
+cd nupm/
+ls
+cd ..
+ls
+cd nupm/
+git status
+git add .
+git status
+cd modules/
+ls
+git clone https://github.com/amtoine/nu-git-manage
+git clone https://github.com/FMotalleb/nu_plugin_clipboard.git
+clipboard
+nupm install --path nu_plugin_clipboard -f
+use nupm/nupm
+nupm install nupm --force --path
+nupm
+nupm list
+nupm --help
+nupm main
+cd nupm/modules/
+ls
+cargo update self
+cargo update --self
+nupm install nu_plugin_clipboard/ --path --force
+mv nu_plugin_clipboard/ ../..
+ls
+mkdir packages
+mv nu_plugin_clipboard/ packages/
+clipboard
+nupm
+nvim config.nu 
+nupm
+nvim config.nu 
+nupm --help
+ls
+mv packages/nu_plugin_clipboard/ nupm/modules/
+clipboard
+cat synthese.txt | clipboard copy
+clipboard paste
+ipconfig getifaddr en0
+arp -a
+ssh root@192.168.100.255
+ssh root@192.168.100.164
+arp -a
+ssh root@192.168.100.96
+clear
+z headless
+ls
+cat wpa_supplicant.conf 
+nvim wpa_supplicant.conf
+cat interfaces 
+cat authorized_keys 
+docker run --rm -it alpine:latest -v $"(pwd):/home/root"
+docker ps -a
+docker run --rm -it alpine:latest -v $"(pwd):/home/root"
+docker run --rm -it alpine:latest --volume $"(pwd):/home/root"
+docker run --rm -it alpine:latest -v $"(pwd):/home/root"
+docker run --rm -it alpine:latest -v (pwd):/home/root
+z fish
+nvim config.fish 
+docker run --rm -it --volume $(pwd):/root alpine:latest
+docker run --rm -it --volume $"(pwd):/root" alpine:latest
+z /Volumes/
+ls
+cd `NO NAME/`
+ls
+rm headless.apkovl.tar.gz
+pwd
+cp headless.apkovl.tar.gz "/Volumes/NO NAME"
+ls
+cd
+z fish
+nvim config.fish 
+cat wpa_supplicant.conf 
+arp -a
+ping 192.168.100.96
+ping 192.168.100.164
+sh root@!$
+ssh root@192.168.100.164
+ssh root@192.168.100.255
+ssh root@192.168.100.255 -i ~/.ssh/id_ed25519.pub 
+ssh root@192.168.100.255 -i ~/.ssh/id_ed25519
+arp -a
+ssh root@192.168.100.164
+fish
+arp -a
+cat README.md 
+cp wpa_supplicant.conf "/Volumes/NO NAME"
+cp interfaces "/Volumes/NO NAME"
+ls
+cp authorized_keys "/Volumes/NO NAME"
+ls
+ls
+sudo diskutil unmount "NO NAME"
+cd
+sudo diskutil unmount "NO NAME"
+arp -a
+ssh root@192.168.100.164
+arp -a
+ssh root@192.168.100.164
+ssh root@192.168.100.87
+ssh pilot@rega.local
+ssh root@192.168.100.87
+z headless
+which nu_plugin_gstat 
+gstat . -t
+gstat --help
+gstat .
+time gstat . 
+cp authorized_keys "/Volumes/NO NAME"
+cp interfaces "/Volumes/NO NAME"
+cp wpa_supplicant.conf "/Volumes/NO NAME"
+cp headless.apkovl.tar.gz "/Volumes/NO NAME"
+ssh root@192.168.100.87
+cp wpa_supplicant.conf "/Volumes/NO NAME"
+cp interfaces "/Volumes/NO NAME"
+cp authorized_keys "/Volumes/NO NAME"
+sudo diskutil unmount "NO NAME"
+arp -a
+ssh root@192.168.100.87
+arp -a
+ping 192.168.100.87
+rp -a
+arp -a
+ssh pilot@rega.local
+ssh root@192.168.100.87
+arp -a
+ping 192.168.100.87
+cp headless.apkovl.tar.gz "/Volumes/NO NAME"
+sudo diskutil unmount "NO NAME"
+arp -a
+ssh root@192.168.100.87
+ifconfig 
+ipconfig getifaddr en0
+ls
+cd alpine-linux-headless-bootstrap/
+ls
+ls
+mv alpine-headless.apkovl.tar.gz alpine-headless.apkovl.tar.gz.bak
+cp headless.apkovl.tar.gz `/Volumes/NO NAME/`
+ls
+cat config.txt 
+cd
+sudo diskutil unmount "NO NAME"
+ssh root@192.168.100.87
+cd NO NAME
+z NO NAME
+ls
+rm headless.apkovl.tar.gz
+ls
+cat authorized_keys 
+sudo diskutil unmount "NO NAME"
+cd ..
+cd fixme/
+ls
+cd alpine-headless.apkovl/
+ls
+fish
+ls
+cd etc/
+ls
+cd network/
+ls
+nvim interfaces
+ls
+mv headless.apkovl.tar.gz `/Volumes/NO NAME/`
+ssh root@192.168.100.87
+ping 192.168.100.87
+cp headless.apkovl.tar.gz `/Volumes/NO NAME/`
+ls
+docker run --rm -it --volume $"(pwd):/root" alpine:latest
+l
+ls
+cp headless.apkovl.tar.gz `/Volumes/NO NAME/`
+z vol
+sudo diskutil unmount "NO NAME"
+ls
+ssh root@192.168.100.87
+cd `NO NAME/`
+ls
+mv alpine-headless.apkovl.tar.gz rega.local.apkovl.tar.gz
+sudo diskutil unmount "NO NAME"
+z vol
+arp -a
+ssh root@192.168.100.87
+ssh pilot@192.168.100.87
+ping 192.168.100.87
+cd `NO NAME/`
+ls
+cp headless.apkovl.tar.gz `/Volumes/NO NAME/`
+sudo diskutil unmount "NO NAME"
+ssh root@192.168.100.87
+ping 192.168.100.87
+cd `NO NAME/`
+ls
+mv rega.local.apkovl.tar.gz rega.local.apkovl.tar.gz.bak
+s
+sudo diskutil unmount "NO NAME"
+ping 192.168.100.87
+cd no
+cd NO NAME
+z `NO NAME/`
+ls
+mv rega.local.apkovl.tar.gz.bak ~/HOME/CODE/playground/rpi5/fixme
+ls
+sudo diskutil unmount "NO NAME"
+ping 192.168.100.87
+$env.XDG_CONFIG_HOME
+cd /etc
+ls
+launchctl --help
+launchctl setenv --help
+launchctl getenv XDG_CONFIG_HOME
+launchctl getenv
+launchctl setenv XDG_CONFIG_HOME /Users/bf
+launchctl getenv XDG_CONFIG_HOME
+launchctl getenv
+launchctl getenv XDG_CONFIG_HOME
+launchctl setenv XDG_CONFIG_HOME /Users/bf/
+launchctl getenv XDG_CONFIG_HOME
+launchctl unsetenv XDG_CONFIG_HOME /Users/bf/
+launchctl getenv XDG_CONFIG_HOME
+launchctl setenv XDG_CONFIG_HOME /Users/bf/.config
+launchctl getenv XDG_CONFIG_HOME
+launchctl setenv XDG_CONFIG_HOME /Users/bf/.config/
+zoxide 
+brew
+launchctl unsetenv XDG_CONFIG_HOME /Users/bf/
+launchctl unsetenv XDG_CONFIG_HOME
+launchctl getenv XDG_CONFIG_HOME
+cd
+brew
+cd /etc
+ls
+cd
+z fish
+nvim config.fish 
+cd
+help nu
+nu --help
+$env.XDG_CONFIG_HOME
+nu -n
+launchctl getenv XDG_CONFIG_HOME
+launchctl getenv *
+launchctl getenv
+env
+z fish
+$env.SHELL
+nvim config.fish 
+cd
+clear
+z nushell
+ls
+cd util/
+ls
+use vrl
+cd ..
+use util/vrl.nu
+vrl --name "CN"
+cd CN/
+ls
+cat CN.md 
+vrl
+ls
+cd ..
+rm -rf CN
+vrl --name "DMDB"
+cd DMDB/
+rm -rf DMDB.md
+vrl --name "W&S"
+vrl --name "FMFP"
+cd
+ls
+rm -rf DMDB/
+ls
+vrl --name "FMFP"
+vrl --name "W&S"
+rm -rf W&S/
+rm -rf FMFP/
+echo $env.SHELL
+1day / 1min
+z vbzli
+ls
+cd bruno/
+ls
+cd collection/
+ls
+curl --request GET \<\n>  --url https://api.opentransportdata.swiss/la/siri-et \<\n>  --compressed \<\n>  --header 'accept-encoding: zip, br, deflate' \<\n>  --header 'authorization: eyJvcmciOiI2NDA2NTFhNTIyZmEwNTAwMDEyOWJiZTEiLCJpZCI6Ijk5ZDM3NjE4YjViZjQ0NDRhNWI5MWNhNmI4MjFlM2I0IiwiaCI6Im11cm11cjEyOCJ9' \<\n>  --header 'content-type: application/xml' \<\n>  --header 'user-agent: bruno' \<\n>  --data '<?xml version="1.0" encoding="UTF-8"?><\n><Trias version="1.1" xmlns="http://www.vdv.de/trias" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><\n>    <ServiceRequest><\n>        <siri:RequestTimestamp>2022-11-04T16:01:06.488Z</siri:RequestTimestamp><\n>        <siri:RequestorRef>API-Explorer</siri:RequestorRef><\n>        <RequestPayload><\n>            <StopEventRequest><\n>                <Location><\n>                    <LocationRef><\n>                        <StopPointRef>8576193</StopPointRef><\n>                    </LocationRef><\n>                    <DepArrTime>2022-11-04T17:00:56</DepArrTime><\n>                </Location><\n>                <Params><\n>                    <NumberOfResults>4</NumberOfResults><\n>                    <StopEventType>departure</StopEventType><\n>                    <IncludePreviousCalls>false</IncludePreviousCalls><\n>                    <IncludeOnwardCalls>false</IncludeOnwardCalls><\n>                    <IncludeRealtimeData>true</IncludeRealtimeData><\n>                </Params><\n>            </StopEventRequest><\n>        </RequestPayload><\n>    </ServiceRequest><\n></Trias>'
+vrl --name "W&S"
+z nu
+use util/vrl.nu
+z 
+z new-vrl
+ls
+vrl --name "W&S"
+vrl --name "DMDB"
+vrl --name "CN"
+cat CN.md 
+cat CN/CN.md 
+rm -rf * 
+ls
+vrl --name "W&S" --sem 4
+vrl --name "CN" --sem 4
+vrl --name "DMDB" --sem 4
+vrl --name "FMFP" --sem 4
+cd
+z nu
+nv config.nu
+nvim config.nu
+vrl
+use util/vrl.nu
+vrl
+nvim config.nu
+nvim util/vrl.nu 
+gs
+man gs
+ssh cm-lee.vsos.ethz.ch
+z nu
+^open "obsidian://advanced-uri?&settingid=editor&settingsection=Display"
+gpg --edit-key 25C365F0D6DA5EED
+ls
+z Downloads/
+mv iTermAI.app/ /Applications/
+ollama ls
+ollama pull llama3
+tmux 
+z bgp
+scp 04_bgp/ tree@194.230.148.224
+scp -R 04_bgp/ tree@194.230.148.224:~
+scp -r 04_bgp/ tree@194.230.148.224:~
+ssh tree@194.230.148.224:~
+ipconfig getifaddr en0
+if a
+ip a
+ssh tree@192.168.8.214
+scp -r 04_bgp/ tree@192.168.8.214:~
+brew install msty
+tmux a
+rmds
+rmtm
+nv
+nvim
+ghci
+clear
+date now
+ollama ls
+ollama ls | table 
+ollama ls | each {|m| ollama pull $m}
+ollama pull llama3:latest
+ls examples/
+ls examples/ | each {|f| cat f}
+ls examples/ | each {|f| cat $f}
+ls examples/ | get 0 | each {|f| cat $f}
+ls examples/
+(ls examples/).name
+(ls examples/).name | each {|f| cat $f}
+(ls examples/).name | each {|f| cat $f} | ./bin/impli
+(ls examples/).name | each {|f| echo (cat $f)}
+cd util/
+import util/qr-code.nu
+use util/vrl.nu
+ls
+use qr-code.nu 
+qr-code "auigfdoawhd+"
+qr-code "auigfdoawhd+" --size 200
+qr-code --size=200 "auigfdoawhd+"
+qr-code "auigfdoawhd+"
+use util/qr-code.nu 
+qr-code "auigfdoawhd+"
+use util/qr-code.nu 
+qr-code "auigfdoawhd+"
+qr-code "auigfdoawhd+" --output "ajhwvdi"
+qr-code https://github.com/tboox/ltui --output
+qr-code https://github.com/tboox/ltui
+use util/reminder.nu 
+reminder --help
+help date
+date now
+date humanize
+date now | date humanize
+"5min" | date from-human
+echo "5min" | date from-human
+help time
+help duration
+clear
+use util/reminder.nu 
+reminder 1sec
+reminder --time=1sec
+reminder 1sec
+reminder --help
+reminder 2sec
+use util/reminder.nu 
+reminder 2sec
+let message = "abc"
+osascript -e $"display notification \"($message | default 'Take a break.')\" with title 'Reminder'"
+osascript -e $"display notification 'Take a break.' with title 'Reminder'"
+osascript -e "display notification 'Take a break.' with title 'Reminder'"
+use util/reminder.nu 
+reminder 1sec
+help string
+help ++
+help +
+help concat
+help string
+string help
+use util/reminder.nu 
+reminder 1sec
+reminder 1sec "stretch"
+use util/reminder.nu 
+reminder 1sec "stretch"
+use util/reminder.nu 
+reminder 1sec "stretch"
+-1sec
+let now = date now
+now
+$now
+$now + -2day
+clear
+use util
+vrl --help
+reminder --help
+use util/reminder.nu 
+reminder --help
+use util
+vrl --help
+use util
+vrl --help
+help util
+use util
+vrl --help
+use util/reminder.nu 
+reminder --help
+clear
+vrl --help
+z autoload
+fish
+z nu
+cd .config/nushell
+ls
+nvim env.nu 
+nano env.nu
+exec nu
+which nu
+nano env.nu
+which nu
+$env.PATH
+z nu
+config env
+$env.PATH
+brug
+brew upgrade --greedy 
+brew cleanup --prune all 
+tmux a
+z kathara
+ls
+z 05
+kathara lclean
+ch kathara
+fish
+$env.PATH
+$env.PATH ++ ["/usr/local/bin"]
+$env.PATH
+which nu
+which rust
+which rustc
+which ghc
+ghci
+which go
+which goc
+which ghc
+which java
+java -version
+brew ls | grep jdk
+brew info openjdk
+brew rm openjdk@21
+brew cleanup --prune all 
+which javca
+which java
+java -version
+which kathara
+config env
+z scion
+kathara lclean
+cd "/Users/bf/"
+brew list | grep lisp
+clisp
+brew rm clisp
+brew info texliv
+brew info texlive
+texlive
+open -a texlive
+^open -a texlive
+brew rm texlive
+brew cleanup --prune all 
+brew rm clisp
+brew cleanup --prune all 
+brew intall sbcl
+brew isntall sbcl
+brew install sbcl
+sbcl
+brew info quicklisp
+curl -O https://beta.quicklisp.org/quicklisp.lisp
+sbcl --load quicklisp.lisp
+sbcl
+nvim .sbclrc
+sbcl
+nvim .sbclrc
+sbcl
+ls
+rm quicklisp/
+rm quicklisp.lisp
+cd quicklisp/
+ls
+cd ..
+nvim .sbclrc
+sbcl
+curl -O https://beta.quicklisp.org/quicklisp.lisp
+sbcl --load quicklisp.lisp
+rm -rf quicklisp/
+sbcl --load quicklisp.lisp
+ls
+rm quicklisp.lisp
+nvim .sbclrc 
+sbcl
+nvim .sbclrc 
+sbcl
+nvim .sbclrc 
+sbcl
+cat .sbclrc 
+sbcl
+nvim .sbclrc 
+sbcl
+nvim .sbclrc 
+sbcl
+nvim .sbclrc 
+sbcl
+nvim .sbclrc 
+sbcl
+nvim .sbclrc 
+sbcl
+nvim .sbclrc 
+sbcl
+nvim .sbclrc 
+echo $env.TERM
+nvim .sbclrc 
+sbcl
+nvim .sbclrc 
+sbcl
+cat .sbclrc 
+sbcl
+nvim .sbclrc 
+sbcl
+nvim .sbclrc 
+sbcl
+cat .sbclrc 
+sbcl
+sbcl --no-linedit
+nvim .sbclrc 
+sbcl
+nvim .sbclrc 
+sbcl
+nvim .sbclrc 
+brew info rlwrap
+rlwrap sbcl
+sbcl
+nvim .sbclrc 
+sbcl
+$env.PREFIX
+let PREFIX = "asdf"
+$env.PREFIX
+ls
+mkcd ad
+mkdir .cl
+cd .cl
+nvim repl.lisp
+chmod +x repl.lisp 
+./repl.lisp
+rm -rf .cl/
+git clone https://github.com/hellerve/sbcli.git
+cd sbcli/
+nvim install.sh 
+./install.sh
+nvim install.sh 
+mkdir ~/.cl
+nvim install.sh 
+./install.sh
+nvim install.sh 
+cd ..
+ls
+ls -a
+rm -rf .sbcli_history
+cd .cl
+ls
+touch sbcli
+cd ..
+cd sbcli/
+./install.shin
+./install.sh
+nvim install.sh 
+./install.sh
+nvim install.sh 
+./install.sh
+cat install.sh 
+<\n>cp repl.lisp "/Users/bf/.cl/bin/sbcli";<\n>chmod 755 "/Users/bf/.cl/bin/sbcli"
+cp repl.lisp "/Users/bf/.cl/bin/sbcli"
+ls
+cp re repl.lisp ~/.cl/bin/sbcli
+cp repl.lisp ~/.cl/bin/sbcli
+cd .cl
+ls
+rm *
+ls
+mkdir bin
+ls bin
+ls
+cd bin
+ls
+chmod 755 sbcli 
+nvim sbcli 
+sbcli
+./sbcli
+config env
+sbcli
+sbcl
+cd
+nvim .sbclrc 
+.cl
+ls
+nvim .sbclirc
+sbcli
+nvim .sbclirc
+sbcli
+nvim .sbclirc
+sbcli
+sbcl
+fish
+cd
+cd .cl
+ls
+ls -a
+nvim .sbclirc
+rm .sbclirc
+nvim bin/sbcli 
+sbcl
+config env
+sbcl
+z nu
+ls -a
+cd autoload/
+ls
+nvim alias.nu 
+config env
+ls
+cd
+ls
+rm -rf quicklisp/
+curl -O https://beta.quicklisp.org/quicklisp.lisp
+.cl
+ls
+cd bin/
+ls
+sbcl --load quicklisp.lisp
+cd .cl
+ls
+cd ..
+nvim sbcli 
+ls
+ls -a
+cd ..
+ls
+cd ..
+ös
+ls
+cd .cl
+ls
+mv bin/ .. && rm -rf * && mv ../bin/ .
+mv bin/ ..; rm -rf *; mv ../bin/ .
+ls
+cd ..
+cd .cl
+ls
+sbcl --load quicklisp.lisp
+cd quicklisp/
+ls
+ls -a
+nvim .sbclrc 
+sbcl
+rlwrap sbcl
+sbcli
+cd bin
+cd ..
+bin
+bin/
+nvim sbcli 
+sbcl
+sbcli
+nvim sbcli 
+sbcli
+sbcl
+brew upgrade
+tmux
+tmux ls
+clear
+$env.TMUX
+clear
+tmux
+clear
+tmux a
+h
+ifish
+fish
+env -u TMUX
+env --unset TMUX
+unset TMUX
+hide TMUX
+nu
+tmux a
+cabal run
+fourmolu -i src/IMP/REPL.hs
+cabal run
+fourmolu -i src/IMP/REPL.hs
+rmds
+z nushell
+z fish
+nvim conf.d/fish_user_key_bindings.fish 
+fzf
+cat conf.d/alias.fish 
+cat conf.d/fish_user_key_bindings.fish 
+nvim autoload/alias.nu 
+ls
+cd autoload/
+ls
+fzf --help
+man fzf
+brew upgrade --greedy 
+cabal run
+brew upgrade --greedy 
+fisher update
+fish
+commandline --replace
+commandline --help 
+commandline edit -r $"(^ls)"
+commandline edit -i $"(^ls)"
+commandline edit -a $"(^ls)"
+ls
+cabal run 
+fourmolu -i src/IMP/REPL.hs
+cabal run
+brug
+brew upgrade --greedy 
+rmds
+cabal run
+fourmolu -i src/IMP/REPL.hs
+cabal run
+cabal repl
+rmtm
+cabal run
+cabal repl
+cabal run
+cabal repl
+cabal run
+cabal repl
+cabal run
+cabal repl
+cabal run
+z Downloads/
+zed _chat.txt
+brew info uv
+brew install uv
+uv
+uv self update
+uvx pycowsay 'hello world!'
+tmux a
+uvx oterm
+brm
+btm
+echo $env.TMUX
+clear
+tmux
+cabal run
+zsh
+cabal run
+z vault
+git gc --prune=all
+ahkbdia
+cabal run
+brew upgrade --greedy 
+brew cleanup --prune all 
+cargo update --self
+cargo update
+cargo update --help
+cargo upgrade
+cargo --list
+rustup update
+prevuse std/dirs
+use std/dirs
+z eth
+dirs list
+dirs
+z impli
+dirs
+let dir = ""
+mv ... $dir
+error make
+error make --help
+error make {msg: ""}
+sleep 3
+sleep 3sec
+config nu
+set --help
+config env
+zsh
+ghci
+lua lima/src/main.lua
+lua src/main.lua
+zsh
+tmux a
+lua src/main.lua
+brew upgrade --greedy 
+brew rm spotify
+brew cleanup --prune all 
+brew install spotify
+open -a spotify
+^open -a spotify
+brew cleanup --prune all 
+nvim quicklisp.lisp 
+rm quicklisp.lisp
+sbcli
+brew upgrade --greedy 
+cd 06_triangle_scion/
+kathara lstart
+ls
+tmu a
+tmux a
+cd 06_triangle_scion/
+kathara lclean
+cd 06_triangle_scion/
+kathara lclean
+kathara lstart
+tmux a
+tmux ls
+tmux a
+nv
+nvim
+brew install uutils-coreutils
+brew ls | grep utils
+brew deps coreutils
+brew deps gmp
+brew info coreutils
+brew deps
+fish
+brew deps --tree --installed coreutils
+brew deps --tree $(brew leaves)
+brew deps --tree (brew leaves)
+brew deps --tree $(brew list --casks -1)
+brew deps --tree (brew list --casks -1)
+brew deps --tree (brew list --formulae-1)
+brew deps --tree (brew list --formulae -1)
+fish
+brew help
+man brew
+asc
+fish
+asciiquarium 
+nvim
+rm budget
+z vault
+fd AuW
+fd AuD
+fd hromkovic
+fd AuD
+fd AuD | each {|f| echo $f}
+fd AuD | each {|f| echo (str replace "AuD" "A&D" $f)}
+fd AuD | each {|f| echo ($f | str replace "AuD" "A&D")}
+fd AuD | each {|f| echo ($f | str replace -r "AuD" "A&D")}
+str replace --help
+fd AuD | each {|f| echo ($f | str replace -a "AuD" "A&D")}
+fd AuD | each {|f| mv $f ($f | str replace -a "AuD" "A&D")}
+fd AuD
+fd AuD | each {|f| mv $f ($f | str replace -a "AuD" "A&D")}
+fd AuD | each {|| echo }
+fd AuD | each {|| echo $in}
+fd AuD | lines
+fd AuD | lines | each {|f| echo ($f | str replace -a "AuD" "A&D")}
+fd AuD | lines | each {|f| mv $f ($f | str replace -a "AuD" "A&D")}
+fd AuD | lines | each {|f| mv $f ($f | str replace -a "AuD" "A&D")} | ignore
+fd AuW | lines | each {|f| mv $f ($f | str replace -a "AuW" "A&W")} | ignore
+fd auw
+fd auw | lines | each {|f| mv $f ($f | str replace -a "auw" "a&w")} | ignore
+fd aud
+fd AuD
+fd TIN
+z fish
+brew upgrade --greedy 
+echo ZED_ENVIROMENT
+echo $env.ZED_ENVIROMENT
+echo $env.ZED_ENVIROMENT?
+/opt/homebrew/bin/fish
+'TMUX' in $env
+$env.TMUX = "asd"
+'TMUX' in $env
+'TMUX' in $env or 'ZED' in $env
+z config
+z fish
+$env.AIWBD = ""
+'AIWBD' in $env

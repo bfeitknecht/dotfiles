@@ -45,34 +45,47 @@ $env.config.keybindings = [
     }
       
   }
-
-
-
-
-
-
-
-
-  # abbreviaitons menu, broken on !! and !$ alias with space and spce alone also 
   {
-    name: abbr_menu
-    modifier: none
-    keycode: enter
+# not happy with it
+    name: "ls_token"
+    modifier: "alt"
+    keycode: "Char_l"
     mode: [emacs, vi_normal, vi_insert]
-    event: [
-        { send: menu name: abbr_menu }
-        { send: enter }
-    ]
-  }
-  {
-    name: abbr_menu
-    modifier: none
-    keycode: space
-    mode: [emacs, vi_normal, vi_insert]
-    event: [
-        { send: menu name: abbr_menu }
-        { edit: insertchar value: ' '}
-    ]
+    event: {
+      send: executehostcommand
+      cmd: "((ls | get name) | to text)"
+    }
   }
 ]
+
+
+
+
+
+
+
+# abbreviaitons menu, broken on !! and !$ alias with space
+# also on enter
+
+#  {
+#    name: abbr_menu
+#    modifier: none
+#    keycode: enter
+#    mode: [emacs, vi_normal, vi_insert]
+#    event: [
+#        { send: menu name: abbr_menu }
+#        { send: enter }
+#    ]
+#  }
+#
+#  {
+#    name: abbr_menu
+#    modifier: none
+#    keycode: space
+#    mode: [emacs, vi_normal, vi_insert]
+#    event: [
+#        { send: menu name: abbr_menu }
+#        { edit: insertchar value: ' ' }
+#    ]
+#  }
 

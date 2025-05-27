@@ -153,3 +153,5 @@ setopt INTERACTIVE_COMMENTS
 # no titles
 DISABLE_AUTO_TITLE="true"
 
+# hook direnv
+eval "$(direnv hook zsh)"
